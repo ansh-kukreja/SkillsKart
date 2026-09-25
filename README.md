@@ -470,7 +470,7 @@ No license file is currently present in this repository. All rights are reserved
 **Team Nous Cartel**
 
 - Gauraansh Gaur (Team Leader)
-- Moh Owais
+- Mohd Owais
 - Rohan Prasad
 - Shivam Kumar
 - Priyanka Bharti
