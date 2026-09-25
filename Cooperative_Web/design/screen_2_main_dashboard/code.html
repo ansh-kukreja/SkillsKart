@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillsKart Federation Hub - National Federation Operational Ledger</title>
+<!-- Fonts: Literata (Serif) & Karla (Sans) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300..800;1,300..800&amp;family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration Verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-container": "#dfffb7",
+            "on-primary-fixed": "#331200",
+            "on-secondary-container": "#5d1900",
+            "surface-variant": "#e6e2dc",
+            "secondary": "#ac3400",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "primary-fixed": "#ffdbca",
+            "tertiary": "#396200",
+            "on-secondary-fixed-variant": "#832600",
+            "on-primary": "#ffffff",
+            "surface-dim": "#dddad4",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed-dim": "#a0d663",
+            "inverse-primary": "#ffb68e",
+            "outline": "#897267",
+            "surface-container-highest": "#e6e2dc",
+            "primary-container": "#b45309",
+            "on-tertiary-fixed": "#0f2000",
+            "on-error": "#ffffff",
+            "on-primary-container": "#fff1eb",
+            "surface-container": "#f1ede7",
+            "on-tertiary-fixed-variant": "#2e4f00",
+            "on-surface": "#1c1c18",
+            "on-background": "#1c1c18",
+            "primary": "#903f00",
+            "secondary-fixed-dim": "#ffb59d",
+            "on-surface-variant": "#564338",
+            "secondary-container": "#fd6b36",
+            "surface-bright": "#fdf9f3",
+            "surface": "#fdf9f3",
+            "tertiary-container": "#4d7c0f",
+            "on-secondary-fixed": "#390c00",
+            "outline-variant": "#ddc1b3",
+            "inverse-surface": "#31302d",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#f4f0ea",
+            "on-primary-fixed-variant": "#763300",
+            "surface-container-high": "#ebe8e2",
+            "tertiary-fixed": "#bbf37c",
+            "background": "#fdf9f3",
+            "surface-tint": "#9b4500",
+            "surface-container-lowest": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary-fixed-dim": "#ffb68e",
+            "surface-container-low": "#f7f3ed",
+            "secondary-fixed": "#ffdbd0"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-lg": "1.25rem",
+            "margin": "2rem",
+            "space-xs": "0.25rem",
+            "space-md": "0.75rem",
+            "gutter": "1.25rem",
+            "space-xl": "2rem",
+            "gutter-mobile": "0.75rem",
+            "margin-mobile": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "headline-lg-mobile": ["Literata"],
+            "body-md": ["Karla"],
+            "title-md": ["Karla"],
+            "headline-md": ["Literata"],
+            "label-lg": ["Karla"],
+            "label-sm": ["Karla"],
+            "headline-sm": ["Literata"],
+            "body-lg": ["Karla"],
+            "headline-lg": ["Literata"],
+            "display-lg": ["Literata"],
+            "body-sm": ["Karla"],
+            "display-lg-mobile": ["Literata"],
+            "label-md": ["Karla"],
+            "title-lg": ["Literata"]
+          },
+          "fontSize": {
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 1.15rem;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1ede7;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #ddc1b3;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen flex flex-col">
+<!-- ================= TOP CONTEXT NOTIFICATION BAR ================= -->
+<div class="w-full bg-surface-container-high border-b border-outline-variant px-margin py-1 text-on-surface-variant font-label-sm text-label-sm flex items-center justify-between z-50">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-DEFAULT bg-primary text-on-primary font-label-sm uppercase tracking-wider">Apex Directorate</span>
+<span class="font-semibold text-on-surface">National Tier 1 - New Delhi</span>
+<span class="text-outline">|</span>
+<span>Jurisdiction: <strong class="text-on-surface">28 State Federations</strong></span>
+<span class="text-outline">|</span>
+<span>Gazette Dispatch Cycle: <code class="font-mono text-primary font-bold">#FED-2025/Q1</code></span>
+</div>
+<div class="hidden md:flex items-center gap-space-md text-body-sm font-body-sm">
+<span class="flex items-center gap-1 text-tertiary font-medium">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping inline-block"></span>
+        Ledger State: Cryptographically Sealed
+      </span>
+<span class="text-outline">|</span>
+<span class="text-on-surface-variant font-mono">IST 11:42:09</span>
+</div>
+</div>
+<!-- ================= TOP NAVBAR COMPONENT (Source JSON Bound) ================= -->
+<header class="bg-surface-bright border-b border-outline-variant sticky top-0 z-40 w-full h-14">
+<div class="flex justify-between items-center w-full px-space-lg h-full">
+<!-- Left Anchor & Brand Logo -->
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-DEFAULT bg-primary flex items-center justify-center text-on-primary font-title-lg font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-lg font-title-lg font-bold text-primary tracking-tight">SkillsKart Federation Hub</span>
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase -mt-1">Ministry of Cooperation</span>
+</div>
+</div>
+<!-- Desktop Navigation Links (From JSON) -->
+<nav class="hidden xl:flex items-center gap-space-md ml-space-md">
+<a class="border-b-2 border-primary text-primary font-title-md text-title-md pb-1 flex items-center gap-1" href="#">
+            Federation Ledger
+          </a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface px-1 pb-1 transition-colors duration-150" href="#">
+            Union Clusters
+          </a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface px-1 pb-1 transition-colors duration-150" href="#">
+            Labour Vault
+          </a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface px-1 pb-1 transition-colors duration-150" href="#">
+            Grievances
+          </a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface px-1 pb-1 transition-colors duration-150" href="#">
+            Audit Logs
+          </a>
+</nav>
+</div>
+<!-- Right Trailing Actions & Search -->
+<div class="flex items-center gap-space-sm">
+<!-- Search Bar (on_right) -->
+<div class="relative hidden sm:block w-48 lg:w-64">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-base">search</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant pl-8 pr-3 py-1.5 rounded-DEFAULT text-body-sm font-body-sm placeholder:text-on-surface-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Search artisan UID, node..." type="text"/>
+</div>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-DEFAULT border border-outline-variant bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant transition-colors duration-150" title="Notifications">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-DEFAULT border border-outline-variant bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant transition-colors duration-150" title="Help Center">
+<span class="material-symbols-outlined">help_center</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-DEFAULT border border-outline-variant bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant transition-colors duration-150" title="Treasury Balance">
+<span class="material-symbols-outlined">account_balance</span>
+</button>
+</div>
+<!-- Emergency SOS (3) Action in Rust Red -->
+<button class="bg-secondary text-on-secondary border border-on-secondary-fixed-variant px- space-md py-1.5 rounded-DEFAULT text-label-sm font-label-sm uppercase flex items-center gap-1.5 hover:bg-on-secondary-container transition-colors duration-150 active:scale-[0.98]">
+<span class="material-symbols-outlined text-sm animate-pulse" style="font-variation-settings: 'FILL' 1;">e911_emergency</span>
+<span class="font-bold">Emergency SOS (3)</span>
+</button>
+<!-- Batch Commit Primary Action -->
+<button class="bg-primary-container text-on-primary border border-primary px-space-md py-1.5 rounded-DEFAULT text-label-sm font-label-sm uppercase flex items-center gap-1.5 hover:bg-primary transition-colors duration-150 active:scale-[0.98]">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span>Batch Commit</span>
+</button>
+<!-- Profile Avatar / Seal -->
+<div class="pl-2 border-l border-outline-variant flex items-center gap-2">
+<div class="w-8 h-8 rounded-DEFAULT bg-surface-container-high border border-outline-variant flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Official round emblem and portrait seal of the Chief Registrar of Indian Cooperative Societies. High-contrast brass and ochre insignia showing traditional artisan scales and national tri-colour emblem in dignified archival style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB5bb2yjhUS3OYw092-GZq1ZXqmZBI8Wvi1qnMkL0Ydy7JDzK1fgfN4BhBCJYPLZpYExF9SyAoAWBEAwXZpPKGekQ6nMt4VThqa7xITBdFHt9A6FvMjwAantjTPfmuUpUTg1koqc0WTV0zaWpQQH7s_Rhce34Y4GsMHPIkD0aiy3kku8QZSSEbGRMXyuSgRSaNjSlaIeOT3Ma4wkCu_WpGDKsvTbUlgalxqLX630LpFTCcdf8JeB9ZxA"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- ================= SHELL LAYOUT: SIDEBAR + MAIN CANVAS ================= -->
+<div class="flex-1 flex overflow-hidden">
+<!-- ================= SIDENAVBAR COMPONENT (Fixed 260px) ================= -->
+<aside class="hidden lg:flex flex-col justify-between w-[260px] bg-surface-container-lowest border-r border-outline-variant h-[calc(100vh-3.5rem)] sticky top-14 p-space-md shrink-0">
+<!-- Top Group -->
+<div class="flex flex-col gap-space-md">
+<!-- Header Profile / Tier Emblem -->
+<div class="p-space-sm border border-outline-variant bg-surface-container-low rounded-DEFAULT flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-DEFAULT bg-surface-container-high border border-outline-variant flex items-center justify-center shrink-0">
+<img class="w-full h-full object-cover" data-alt="National Labour Cooperative Federation Crest in warm terracotta and sepia linework illustration with traditional Indian wheel and handloom motif, signifying unified artisan guild federation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWU45oYeVmNQgSFtMrTuW2WimTWbfxIYvrzxd3Delmc_Ticwc0UdU-ZllmnNIUQdSZd9h_TT32tgL-xyRv-33Du5EBNCbjtikHIM9XRi_hjkRwrsPJvNgXowhvAYtAgxQReGP8JLNxzG84HEYova9EAbn5SEIoZTC-orc_7jHAeauzCOsApWoj6RoKmnW2yLcJsKKe4KL2gijUvXm0TUjhi7h-GwAGouykup4m2LArCgiNbPvC4x4pHQ"/>
+</div>
+<div class="flex flex-col overflow-hidden">
+<span class="text-title-md font-title-md font-bold text-on-surface truncate">Labour Federation Tier 1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Western Zonal Directorate</span>
+</div>
+</div>
+<!-- Navigation Tabs Matrix -->
+<nav class="flex flex-col gap-0.5">
+<!-- Active Tab: Main Dashboard -->
+<a class="bg-surface-container-high text-primary font-title-md text-title-md border-l-4 border-primary rounded-DEFAULT px-space-md py- space-sm flex items-center gap-space-sm" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span>Main Dashboard</span>
+</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-low px-space-md py- space-sm rounded-DEFAULT flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">corporate_fare</span>
+<span>Hierarchy (States &amp; Dist)</span>
+</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-low px-space-md py- space-sm rounded-DEFAULT flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">badge</span>
+<span>Artisan Registry</span>
+</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-low px-space-md py- space-sm rounded-DEFAULT flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span>Bookings &amp; Wage Ledger</span>
+</a>
+<a class="text-secondary font-body-md text-body-md hover:bg-surface-container-low px-space-md py- space-sm rounded-DEFAULT flex items-center justify-between transition-colors duration-150" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">crisis_alert</span>
+<span>Emergency SOS Queue</span>
+</div>
+<span class="px-1.5 py-0.2 bg-secondary text-on-secondary font-label-sm text-[10px] rounded-DEFAULT">3</span>
+</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-low px-space-md py- space-sm rounded-DEFAULT flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span>Bulk Demands</span>
+</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-low px-space-md py- space-sm rounded-DEFAULT flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">price_change</span>
+<span>Federation Rate Cards</span>
+</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-low px-space-md py- space-sm rounded-DEFAULT flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span>Readiness Forecast</span>
+</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-low px-space-md py- space-sm rounded-DEFAULT flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span>Federation Audit Logs</span>
+</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-low px-space-md py- space-sm rounded-DEFAULT flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span>Provident Ledger</span>
+</a>
+</nav>
+</div>
+<!-- Bottom Actions & Footer Tabs -->
+<div class="flex flex-col gap-space-sm pt-space-md border-t border-outline-variant">
+<!-- CTA: File Grievance -->
+<button class="w-full bg-surface-container-high hover:bg-surface-container-highest text-primary border border-outline-variant py-1.5 px-space-sm rounded-DEFAULT font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-base">gavel</span>
+<span>File Grievance</span>
+</button>
+<div class="flex flex-col gap-0.5">
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-low px-space-md py-1 rounded-DEFAULT flex items-center gap-space-sm" href="#">
+<span class="material-symbols-outlined text-sm">archive</span>
+<span>Archival Docs</span>
+</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-low px-space-md py-1 rounded-DEFAULT flex items-center gap-space-sm" href="#">
+<span class="material-symbols-outlined text-sm">settings</span>
+<span>Settings</span>
+</a>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded-DEFAULT border border-outline-variant text-[10px] text-on-surface-variant leading-tight text-center">
+          Ledger Protocol: ISO-20022 · Node verified
+        </div>
+</div>
+</aside>
+<!-- ================= MAIN CONTENT CANVAS ================= -->
+<main class="flex-1 overflow-y-auto custom-scrollbar px-margin py-space-lg flex flex-col gap-space-lg">
+<!-- ================= 3. HEADER ACTION BAR ================= -->
+<section class="flex flex-col md:flex-row md:items-center justify-between gap-space-md border-b border-outline-variant pb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">National Federation Operational Ledger</h1>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-tertiary-container text-on-tertiary font-label-sm text-label-sm uppercase">Q1 Live Session</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            Consolidated cooperative registry, democratic dispatches, and real-time sovereign wage reconciliation for 28 state union directorates.
+          </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="bg-surface-container-lowest text-on-surface border border-outline-variant px-space-md py-1.5 rounded-DEFAULT font-label-md text-label-md hover:bg-surface-container transition-colors duration-150 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">tune</span>
+<span>Filter by Zonal Cluster</span>
+</button>
+<button class="bg-surface-container-lowest text-on-surface border border-outline-variant px-space-md py-1.5 rounded-DEFAULT font-label-md text-label-md hover:bg-surface-container transition-colors duration-150 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">ios_share</span>
+<span>Export CSV / Audit Snapshot</span>
+</button>
+<button class="bg-primary-container text-on-primary border border-primary px-space-md py-1.5 rounded-DEFAULT font-label-md text-label-md hover:bg-primary transition-colors duration-150 flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Download Monthly Gazette</span>
+</button>
+</div>
+</section>
+<!-- ================= 4. TOP KPI ROW ================= -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-gutter">
+<!-- KPI 1: Registered Societies -->
+<div class="bg-surface-container-lowest border border-outline-variant p-space-md rounded-DEFAULT flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-md text-label-md uppercase tracking-wider">Registered Societies</span>
+<span class="material-symbols-outlined text-primary">groups</span>
+</div>
+<div class="my-2">
+<span class="font-headline-lg text-headline-lg text-on-surface">12,400</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm border-t border-outline-variant pt-2 mt-1">
+<span class="text-tertiary font-bold">+412 this month</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded-DEFAULT text-on-surface-variant font-label-sm">28 Active States</span>
+</div>
+</div>
+<!-- KPI 2: Enrolled Artisans -->
+<div class="bg-surface-container-lowest border border-outline-variant p-space-md rounded-DEFAULT flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-md text-label-md uppercase tracking-wider">Enrolled Artisans</span>
+<span class="material-symbols-outlined text-primary">badge</span>
+</div>
+<div class="my-2">
+<span class="font-headline-lg text-headline-lg text-on-surface">452,890</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm border-t border-outline-variant pt-2 mt-1">
+<span class="text-on-surface-variant">Aadhaar &amp; Co-op Verified</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-semibold px-1.5 py-0.5 rounded-DEFAULT text-label-sm">100% Direct</span>
+</div>
+</div>
+<!-- KPI 3: Monthly Bookings -->
+<div class="bg-surface-container-lowest border border-outline-variant p-space-md rounded-DEFAULT flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-md text-label-md uppercase tracking-wider">Monthly Bookings</span>
+<span class="material-symbols-outlined text-primary">receipt_long</span>
+</div>
+<div class="my-2">
+<span class="font-headline-lg text-headline-lg text-on-surface">1,842,100</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm border-t border-outline-variant pt-2 mt-1">
+<span class="font-semibold text-primary font-mono">₹48.2 Cr Gross</span>
+<span class="text-on-surface-variant">Co-op Volume</span>
+</div>
+</div>
+<!-- KPI 4: Opportunity Fairness Index -->
+<div class="bg-surface-container-lowest border border-outline-variant p-space-md rounded-DEFAULT flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-md text-label-md uppercase tracking-wider">Opportunity Fairness</span>
+<span class="material-symbols-outlined text-tertiary">balance</span>
+</div>
+<div class="my-2 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-tertiary font-bold">94.6%</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase">Optimal</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm border-t border-outline-variant pt-2 mt-1">
+<span class="text-on-surface-variant font-mono">Gini Coeff: 0.12</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-bold px-1.5 py-0.5 rounded-DEFAULT text-label-sm">Low Var</span>
+</div>
+</div>
+<!-- KPI 5: Emergency SOS Status -->
+<div class="bg-surface-container-lowest border-2 border-secondary p-space-md rounded-DEFAULT flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 text-secondary opacity-10">
+<span class="material-symbols-outlined text-8xl">crisis_alert</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold">Emergency SOS Status</span>
+<span class="material-symbols-outlined text-secondary animate-pulse" style="font-variation-settings: 'FILL' 1;">e911_emergency</span>
+</div>
+<div class="my-2 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-secondary font-bold">3 Active</span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">Urgent Incidents</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm border-t border-secondary/30 pt-2 mt-1 z-10">
+<span class="text-on-surface-variant">Avg Dispatch: <strong>4.2 mins</strong></span>
+<a class="text-secondary font-bold hover:underline flex items-center gap-0.5" href="#emergency-section">
+<span>Live Queue</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- ================= 5. PROMINENT EMERGENCY SOS BANNER / ALERT STRIP ================= -->
+<section class="bg-surface-container-lowest border-l-4 border-secondary border-t border-r border-b border-outline-variant p-space-md rounded-DEFAULT shadow-sm" id="emergency-section">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm border-b border-outline-variant pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-secondary animate-ping"></span>
+<span class="font-title-md text-title-md font-bold text-secondary uppercase tracking-wider">Live SOS Intervention Dispatches (3 Urgent Alerts)</span>
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded-DEFAULT">Direct Guild Assistance Protocol Engaged</span>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant font-mono">Real-time GPS Triangulation Active · Zonal Marshals on Standby</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Incident Card 1 -->
+<div class="bg-surface-container-low border border-outline-variant p-space-sm rounded-DEFAULT flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-mono text-body-sm font-bold text-secondary">Worker #SK-4491</span>
+<span class="bg-error-container text-on-error-container px-1.5 py-0.2 rounded-DEFAULT font-label-sm text-[10px] uppercase">Wage Impasse</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface font-semibold">Electrician Wage Dispute</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Client refusing agreed union rate ₹1,850 for completed commercial circuit board rewiring in Pune Cluster.
+              </p>
+<div class="mt-2 text-[11px] font-mono text-outline">
+                Location: Kothrud, Pune · Alerted 14m ago
+              </div>
+</div>
+<div class="flex items-center gap-2 mt-space-sm pt-space-xs border-t border-outline-variant">
+<button class="flex-1 bg-secondary text-on-secondary py-1 px-2 rounded-DEFAULT text-label-sm font-label-sm hover:bg-on-secondary-container transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">support_agent</span>
+<span>Dispatch Steward</span>
+</button>
+<button class="bg-surface-container-lowest border border-outline-variant text-on-surface px-2 py-1 rounded-DEFAULT text-label-sm font-label-sm hover:bg-surface-container">
+                Escalate
+              </button>
+</div>
+</div>
+<!-- Incident Card 2 -->
+<div class="bg-surface-container-low border border-outline-variant p-space-sm rounded-DEFAULT flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-mono text-body-sm font-bold text-secondary">Worker #SK-8102</span>
+<span class="bg-error-container text-on-error-container px-1.5 py-0.2 rounded-DEFAULT font-label-sm text-[10px] uppercase">Medical SOS</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface font-semibold">Caregiver Medical Distress</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Field attendant collapsed during post-operative elderly home care assistance; immediate paramedic required.
+              </p>
+<div class="mt-2 text-[11px] font-mono text-outline">
+                Location: Indiranagar, Bengaluru · Alerted 6m ago
+              </div>
+</div>
+<div class="flex items-center gap-2 mt-space-sm pt-space-xs border-t border-outline-variant">
+<button class="flex-1 bg-secondary text-on-secondary py-1 px-2 rounded-DEFAULT text-label-sm font-label-sm hover:bg-on-secondary-container transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">ambulance</span>
+<span>Ambulance Dispatched</span>
+</button>
+<button class="bg-surface-container-lowest border border-outline-variant text-on-surface px-2 py-1 rounded-DEFAULT text-label-sm font-label-sm hover:bg-surface-container">
+                Call Guild
+              </button>
+</div>
+</div>
+<!-- Incident Card 3 -->
+<div class="bg-surface-container-low border border-outline-variant p-space-sm rounded-DEFAULT flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-mono text-body-sm font-bold text-secondary">Worker #SK-1290</span>
+<span class="bg-error-container text-on-error-container px-1.5 py-0.2 rounded-DEFAULT font-label-sm text-[10px] uppercase">Hazard Report</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface font-semibold">Plumber Severe Gas Line Hazard</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Unmapped pressurized LPG conduit punctured during commercial drain excavation. Site evacuation underway.
+              </p>
+<div class="mt-2 text-[11px] font-mono text-outline">
+                Location: Andheri East, Mumbai · Alerted 2m ago
+              </div>
+</div>
+<div class="flex items-center gap-2 mt-space-sm pt-space-xs border-t border-outline-variant">
+<button class="flex-1 bg-secondary text-on-secondary py-1 px-2 rounded-DEFAULT text-label-sm font-label-sm hover:bg-on-secondary-container transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">local_fire_department</span>
+<span>Notify Municipal Fire</span>
+</button>
+<button class="bg-surface-container-lowest border border-outline-variant text-on-surface px-2 py-1 rounded-DEFAULT text-label-sm font-label-sm hover:bg-surface-container">
+                Cordon Area
+              </button>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= 6. GROWTH & ACTIVITY SECTION (TWO COLUMNS) ================= -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column (7 Cols): Federation Scale & Expansion Ledger Chart -->
+<div class="lg:col-span-7 bg-surface-container-lowest border border-outline-variant p-space-lg rounded-DEFAULT flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-outline-variant pb-space-sm mb-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Federation Scale &amp; Cooperative Expansion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">12-Month audited trajectory of co-op societies, registered artisans, and gross demand volume.</p>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-outline uppercase">Annual Gross Run-Rate</span>
+<p class="font-headline-sm text-headline-sm font-bold text-primary font-mono">₹578.4 Cr</p>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant mb-space-md">
+<span class="flex items-center gap-1">
+<span class="w-3 h-3 bg-primary-container inline-block rounded-DEFAULT"></span>
+<span>Artisans (in 10k)</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="w-3 h-3 bg-tertiary inline-block rounded-DEFAULT"></span>
+<span>Cooperative Societies</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="w-3 h-3 bg-secondary-container inline-block rounded-DEFAULT"></span>
+<span>Gross Volume (₹ Cr)</span>
+</span>
+</div>
+<!-- Custom Architectural Ledger Trend Visualizer -->
+<div class="h-56 w-full flex items-end gap-2 sm:gap-4 border-b border-l border-outline-variant p-2 relative">
+<!-- Subtle Background Gridlines -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20">
+<div class="border-b border-outline w-full"></div>
+<div class="border-b border-outline w-full"></div>
+<div class="border-b border-outline w-full"></div>
+<div class="border-b border-outline w-full"></div>
+</div>
+<!-- Month Bars (Representative 12 Months) -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-0.5 h-full">
+<div class="w-1.5 sm:w-2.5 bg-primary-container h-[45%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-tertiary h-[35%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-secondary-container h-[25%] rounded-t-DEFAULT"></div>
+</div>
+<span class="font-mono text-[10px] text-outline">Apr</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-0.5 h-full">
+<div class="w-1.5 sm:w-2.5 bg-primary-container h-[50%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-tertiary h-[38%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-secondary-container h-[30%] rounded-t-DEFAULT"></div>
+</div>
+<span class="font-mono text-[10px] text-outline">May</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-0.5 h-full">
+<div class="w-1.5 sm:w-2.5 bg-primary-container h-[54%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-tertiary h-[42%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-secondary-container h-[34%] rounded-t-DEFAULT"></div>
+</div>
+<span class="font-mono text-[10px] text-outline">Jun</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-0.5 h-full">
+<div class="w-1.5 sm:w-2.5 bg-primary-container h-[58%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-tertiary h-[45%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-secondary-container h-[40%] rounded-t-DEFAULT"></div>
+</div>
+<span class="font-mono text-[10px] text-outline">Jul</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-0.5 h-full">
+<div class="w-1.5 sm:w-2.5 bg-primary-container h-[62%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-tertiary h-[50%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-secondary-container h-[48%] rounded-t-DEFAULT"></div>
+</div>
+<span class="font-mono text-[10px] text-outline">Aug</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-0.5 h-full">
+<div class="w-1.5 sm:w-2.5 bg-primary-container h-[66%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-tertiary h-[55%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-secondary-container h-[52%] rounded-t-DEFAULT"></div>
+</div>
+<span class="font-mono text-[10px] text-outline">Sep</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-0.5 h-full">
+<div class="w-1.5 sm:w-2.5 bg-primary-container h-[72%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-tertiary h-[60%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-secondary-container h-[58%] rounded-t-DEFAULT"></div>
+</div>
+<span class="font-mono text-[10px] text-outline">Oct</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-0.5 h-full">
+<div class="w-1.5 sm:w-2.5 bg-primary-container h-[76%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-tertiary h-[64%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-secondary-container h-[64%] rounded-t-DEFAULT"></div>
+</div>
+<span class="font-mono text-[10px] text-outline">Nov</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-0.5 h-full">
+<div class="w-1.5 sm:w-2.5 bg-primary-container h-[82%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-tertiary h-[70%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-secondary-container h-[72%] rounded-t-DEFAULT"></div>
+</div>
+<span class="font-mono text-[10px] text-outline">Dec</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-0.5 h-full">
+<div class="w-1.5 sm:w-2.5 bg-primary-container h-[88%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-tertiary h-[78%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-secondary-container h-[80%] rounded-t-DEFAULT"></div>
+</div>
+<span class="font-mono text-[10px] text-outline">Jan</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-0.5 h-full">
+<div class="w-1.5 sm:w-2.5 bg-primary-container h-[92%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-tertiary h-[85%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-secondary-container h-[86%] rounded-t-DEFAULT"></div>
+</div>
+<span class="font-mono text-[10px] text-outline">Feb</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full flex items-end justify-center gap-0.5 h-full">
+<div class="w-1.5 sm:w-2.5 bg-primary h-full rounded-t-DEFAULT ring-2 ring-primary"></div>
+<div class="w-1.5 sm:w-2.5 bg-tertiary h-[92%] rounded-t-DEFAULT"></div>
+<div class="w-1.5 sm:w-2.5 bg-secondary-container h-[94%] rounded-t-DEFAULT"></div>
+</div>
+<span class="font-mono text-[10px] text-primary font-bold">Mar</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-outline-variant mt-space-md text-body-sm text-on-surface-variant">
+<span>Audit Ref: <code>#COOP-DISP-2025-992</code></span>
+<span class="text-tertiary font-semibold">Federation Expansion Rate: +23.8% YoY</span>
+</div>
+</div>
+<!-- Right Column (5 Cols): Daily Dispatch Real-Time Breakdown -->
+<div class="lg:col-span-5 bg-surface-container-lowest border border-outline-variant p-space-lg rounded-DEFAULT flex flex-col justify-between">
+<div>
+<div class="border-b border-outline-variant pb-space-sm mb-space-md flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Daily Dispatch Status</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time daily labour utilization matrix</p>
+</div>
+<span class="material-symbols-outlined text-outline">schedule</span>
+</div>
+<!-- Real-time Status Metric Blocks -->
+<div class="grid grid-cols-2 gap-space-sm mb-space-md">
+<div class="p-space-sm bg-surface-container-low border border-outline-variant rounded-DEFAULT">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">In-Progress</span>
+<p class="font-title-lg text-title-lg font-bold text-primary mt-0.5 font-mono">14,210</p>
+<span class="text-[11px] text-tertiary">Active on field</span>
+</div>
+<div class="p-space-sm bg-surface-container-low border border-outline-variant rounded-DEFAULT">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Completed Today</span>
+<p class="font-title-lg text-title-lg font-bold text-tertiary mt-0.5 font-mono">28,490</p>
+<span class="text-[11px] text-tertiary font-medium">₹1.42 Cr disbursed</span>
+</div>
+<div class="p-space-sm bg-surface-container-low border border-outline-variant rounded-DEFAULT">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Scheduled</span>
+<p class="font-title-lg text-title-lg font-bold text-on-surface mt-0.5 font-mono">42,110</p>
+<span class="text-[11px] text-outline">Next 24 Hours</span>
+</div>
+<div class="p-space-sm bg-surface-container-low border border-outline-variant rounded-DEFAULT">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Cancelled</span>
+<p class="font-title-lg text-title-lg font-bold text-secondary mt-0.5 font-mono">&lt;0.8%</p>
+<span class="text-[11px] text-tertiary">Lowest in class</span>
+</div>
+</div>
+<!-- Trade Demographics Breakdown -->
+<div class="space-y-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider block">Trade Demographics Breakdown</span>
+<!-- Trade 1 -->
+<div>
+<div class="flex justify-between text-body-sm font-body-sm mb-1">
+<span class="font-semibold text-on-surface">Electricians &amp; Wiring Guild</span>
+<span class="font-mono text-primary font-bold">32%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-DEFAULT overflow-hidden">
+<div class="bg-primary h-full w-[32%]"></div>
+</div>
+</div>
+<!-- Trade 2 -->
+<div>
+<div class="flex justify-between text-body-sm font-body-sm mb-1">
+<span class="font-semibold text-on-surface">Home Care &amp; Assisted Living</span>
+<span class="font-mono text-tertiary font-bold">26%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-DEFAULT overflow-hidden">
+<div class="bg-tertiary h-full w-[26%]"></div>
+</div>
+</div>
+<!-- Trade 3 -->
+<div>
+<div class="flex justify-between text-body-sm font-body-sm mb-1">
+<span class="font-semibold text-on-surface">Plumbing &amp; Masonry Union</span>
+<span class="font-mono text-secondary font-bold">22%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-DEFAULT overflow-hidden">
+<div class="bg-secondary-container h-full w-[22%]"></div>
+</div>
+</div>
+<!-- Trade 4 -->
+<div>
+<div class="flex justify-between text-body-sm font-body-sm mb-1">
+<span class="font-semibold text-on-surface">Artisan Logistics &amp; Transport</span>
+<span class="font-mono text-on-surface-variant font-bold">20%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-DEFAULT overflow-hidden">
+<div class="bg-outline h-full w-[20%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm border-t border-outline-variant mt-space-md flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Live Dispatch Telemetry</span>
+<button class="text-primary font-bold hover:underline flex items-center gap-1 font-label-sm">
+<span>View Zonal Map</span>
+<span class="material-symbols-outlined text-xs">open_in_new</span>
+</button>
+</div>
+</div>
+</section>
+<!-- ================= 7. WORKER EARNING & JOB OPPORTUNITY DISTRIBUTION (EQUITABLE LEDGER) ================= -->
+<section class="bg-surface-container-lowest border border-outline-variant p-space-lg rounded-DEFAULT">
+<!-- Explanatory Banner: Algorithmic Neutrality Protocol Active -->
+<div class="bg-surface-container-low border-l-4 border-tertiary border-t border-r border-b border-outline-variant p-space-md rounded-DEFAULT mb-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-start md:items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-2xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div>
+<span class="font-title-md text-title-md font-bold text-on-surface">Algorithmic Neutrality Protocol Active</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Democratic dispatch verification mathematically enforces collective job rotation over individual monopolization. No private priority ranking algorithms permitted.
+              </p>
+</div>
+</div>
+<span class="px-2.5 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm rounded-DEFAULT uppercase tracking-wider shrink-0 font-bold">
+            Anti-Gini Compliant
+          </span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter mb-space-lg">
+<!-- Metric 1 -->
+<div class="p-space-md bg-surface-container-low border border-outline-variant rounded-DEFAULT">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Top 10% Workers Share</span>
+<div class="my-1 flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-tertiary font-mono">14.2%</span>
+<span class="text-label-sm font-label-sm text-tertiary">Capped</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Vs. 45% standard gig-economy industry benchmark. Prevents super-earner hoarding.
+            </p>
+</div>
+<!-- Metric 2 -->
+<div class="p-space-md bg-surface-container-low border border-outline-variant rounded-DEFAULT">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Median Weekly Hours</span>
+<div class="my-1 flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-on-surface font-mono">34.5 hrs</span>
+<span class="text-label-sm font-label-sm text-tertiary font-semibold">Sustainable Load</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Guaranteed rest intervals enforced through cooperative working hour caps.
+            </p>
+</div>
+<!-- Metric 3 -->
+<div class="p-space-md bg-surface-container-low border border-outline-variant rounded-DEFAULT">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Minimum Wage Floor Compliance</span>
+<div class="my-1 flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md font-bold text-tertiary font-mono">100%</span>
+<span class="text-label-sm font-label-sm text-tertiary font-semibold">Across 28 States</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Direct cooperative escrow deposits exceed statutory zonal minimums by 24.5%.
+            </p>
+</div>
+</div>
+<!-- Decile Spread Distribution Visualization (Balanced Bell Curve) -->
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Decile Earning Spread (D1 - D10 Democratic Curve)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Ideal Normalized Distribution: σ = 0.08</span>
+</div>
+<div class="h-32 w-full flex items-end gap-1 sm:gap-2 p-2 bg-surface-container-low border border-outline-variant rounded-DEFAULT">
+<!-- Decile 1 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-primary-fixed-dim hover:bg-primary transition-colors h-[28%] rounded-t-DEFAULT" title="Decile 1: ₹18,200 avg"></div>
+<span class="text-[10px] font-mono text-outline">D1</span>
+</div>
+<!-- Decile 2 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-primary-fixed-dim hover:bg-primary transition-colors h-[48%] rounded-t-DEFAULT" title="Decile 2: ₹22,400 avg"></div>
+<span class="text-[10px] font-mono text-outline">D2</span>
+</div>
+<!-- Decile 3 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-primary-fixed-dim hover:bg-primary transition-colors h-[68%] rounded-t-DEFAULT" title="Decile 3: ₹26,100 avg"></div>
+<span class="text-[10px] font-mono text-outline">D3</span>
+</div>
+<!-- Decile 4 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-primary-container hover:bg-primary transition-colors h-[84%] rounded-t-DEFAULT" title="Decile 4: ₹29,800 avg"></div>
+<span class="text-[10px] font-mono text-outline">D4</span>
+</div>
+<!-- Decile 5 (Median) -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-tertiary hover:bg-tertiary-container transition-colors h-[98%] rounded-t-DEFAULT" title="Decile 5: ₹32,500 avg (Median)"></div>
+<span class="text-[10px] font-mono font-bold text-tertiary">D5 (Med)</span>
+</div>
+<!-- Decile 6 (Median) -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-tertiary hover:bg-tertiary-container transition-colors h-[96%] rounded-t-DEFAULT" title="Decile 6: ₹33,100 avg"></div>
+<span class="text-[10px] font-mono font-bold text-tertiary">D6</span>
+</div>
+<!-- Decile 7 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-primary-container hover:bg-primary transition-colors h-[88%] rounded-t-DEFAULT" title="Decile 7: ₹35,200 avg"></div>
+<span class="text-[10px] font-mono text-outline">D7</span>
+</div>
+<!-- Decile 8 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-primary-fixed-dim hover:bg-primary transition-colors h-[76%] rounded-t-DEFAULT" title="Decile 8: ₹37,900 avg"></div>
+<span class="text-[10px] font-mono text-outline">D8</span>
+</div>
+<!-- Decile 9 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-primary-fixed-dim hover:bg-primary transition-colors h-[58%] rounded-t-DEFAULT" title="Decile 9: ₹41,000 avg"></div>
+<span class="text-[10px] font-mono text-outline">D9</span>
+</div>
+<!-- Decile 10 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-secondary-container hover:bg-secondary transition-colors h-[42%] rounded-t-DEFAULT" title="Decile 10: ₹44,500 avg (Capped ceiling)"></div>
+<span class="text-[10px] font-mono text-secondary font-bold">D10 (Top)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= 8. REGIONAL STATE DIRECTORATE PERFORMANCE TABLE ================= -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden">
+<!-- Table Header Panel -->
+<div class="p-space-md border-b border-outline-variant flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Regional State Directorate Performance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Statutory compliance, direct disbursement, and SOS resolution metrics across federated state apex unions.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Showing 5 of 28 State Nodes</span>
+<button class="text-primary font-bold hover:underline font-label-sm text-label-sm flex items-center gap-1">
+<span>View All 28</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Ledger Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant text-on-surface font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-md">State Directorate / Node</th>
+<th class="py-2.5 px-space-md text-right">Societies Count</th>
+<th class="py-2.5 px-space-md text-right">Active Artisans</th>
+<th class="py-2.5 px-space-md text-right">Monthly Disbursement</th>
+<th class="py-2.5 px-space-md text-center">Fairness Score</th>
+<th class="py-2.5 px-space-md text-center">SOS Clearance</th>
+<th class="py-2.5 px-space-md text-center">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant font-body-sm text-body-sm">
+<!-- Row 1: Maharashtra -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Maharashtra Rajya Sahakari Federation</span>
+<span class="text-on-surface-variant text-[11px] font-mono">Node #MH-FED-01 · Western Zone</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-mono font-semibold">2,840</td>
+<td class="py-3 px-space-md text-right font-mono">112,450</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-primary">₹12.84 Cr</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-DEFAULT bg-tertiary-fixed text-on-tertiary-fixed font-label-sm font-bold">
+                    96.2% Optimal
+                  </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="font-mono text-tertiary font-bold">99.4%</span>
+<span class="text-[10px] text-on-surface-variant block">(Avg 3.8m)</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="bg-surface-container border border-outline-variant hover:border-primary text-on-surface px-2.5 py-1 rounded-DEFAULT font-label-sm text-label-sm transition-colors">
+                    Audit Node
+                  </button>
+</td>
+</tr>
+<!-- Row 2: Karnataka -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Karnataka State Labour Co-op Union</span>
+<span class="text-on-surface-variant text-[11px] font-mono">Node #KA-FED-04 · Southern Zone</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-mono font-semibold">2,110</td>
+<td class="py-3 px-space-md text-right font-mono">89,200</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-primary">₹9.75 Cr</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-DEFAULT bg-tertiary-fixed text-on-tertiary-fixed font-label-sm font-bold">
+                    95.8% Optimal
+                  </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="font-mono text-tertiary font-bold">98.9%</span>
+<span class="text-[10px] text-on-surface-variant block">(Avg 4.1m)</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="bg-surface-container border border-outline-variant hover:border-primary text-on-surface px-2.5 py-1 rounded-DEFAULT font-label-sm text-label-sm transition-colors">
+                    Audit Node
+                  </button>
+</td>
+</tr>
+<!-- Row 3: Tamil Nadu -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Tamil Nadu Apex Artisans Society</span>
+<span class="text-on-surface-variant text-[11px] font-mono">Node #TN-FED-02 · Southern Zone</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-mono font-semibold">1,940</td>
+<td class="py-3 px-space-md text-right font-mono">76,310</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-primary">₹8.12 Cr</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-DEFAULT bg-tertiary-fixed text-on-tertiary-fixed font-label-sm font-bold">
+                    94.1% Optimal
+                  </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="font-mono text-tertiary font-bold">99.1%</span>
+<span class="text-[10px] text-on-surface-variant block">(Avg 3.9m)</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="bg-surface-container border border-outline-variant hover:border-primary text-on-surface px-2.5 py-1 rounded-DEFAULT font-label-sm text-label-sm transition-colors">
+                    Audit Node
+                  </button>
+</td>
+</tr>
+<!-- Row 4: Uttar Pradesh -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">UP Shramik Sahakari Sangathan</span>
+<span class="text-on-surface-variant text-[11px] font-mono">Node #UP-FED-09 · Northern Zone</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-mono font-semibold">3,120</td>
+<td class="py-3 px-space-md text-right font-mono">104,180</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-primary">₹10.45 Cr</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-DEFAULT bg-primary-fixed text-on-primary-fixed font-label-sm font-bold">
+                    91.4% Healthy
+                  </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="font-mono text-primary font-bold">97.2%</span>
+<span class="text-[10px] text-on-surface-variant block">(Avg 5.2m)</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="bg-surface-container border border-outline-variant hover:border-primary text-on-surface px-2.5 py-1 rounded-DEFAULT font-label-sm text-label-sm transition-colors">
+                    Audit Node
+                  </button>
+</td>
+</tr>
+<!-- Row 5: Gujarat -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Gujarat Rajya Karigar Mandal</span>
+<span class="text-on-surface-variant text-[11px] font-mono">Node #GJ-FED-03 · Western Zone</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-right font-mono font-semibold">1,620</td>
+<td class="py-3 px-space-md text-right font-mono">68,900</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-primary">₹7.19 Cr</td>
+<td class="py-3 px-space-md text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-DEFAULT bg-tertiary-fixed text-on-tertiary-fixed font-label-sm font-bold">
+                    95.5% Optimal
+                  </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="font-mono text-tertiary font-bold">99.7%</span>
+<span class="text-[10px] text-on-surface-variant block">(Avg 3.4m)</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="bg-surface-container border border-outline-variant hover:border-primary text-on-surface px-2.5 py-1 rounded-DEFAULT font-label-sm text-label-sm transition-colors">
+                    Audit Node
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- ================= 9. FOOTER ================= -->
+<footer class="border-t border-outline-variant pt-space-md pb-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline">verified_user</span>
+<span>National Apex Directorate of Labour Cooperatives · Ministry of Cooperation, New Delhi</span>
+</div>
+<div class="flex items-center gap-space-md font-mono text-xs">
+<span>SkillsKart Engine v4.8.2-Gov</span>
+<span class="text-outline">|</span>
+<a class="hover:text-primary underline" href="#">Sovereign Compliance Charter</a>
+<span class="text-outline">|</span>
+<a class="hover:text-primary underline" href="#">Emergency Escalation Matrix</a>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

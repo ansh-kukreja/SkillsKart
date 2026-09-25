@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #B45309;
+    --secondary: #C2410C;
+    --tertiary: #4D7C0F;
+    --neutral-bg: #FAF6F0;
+    --border-hairline: #E8DFD3;
+    --border-focused: #D8C6B1;
+  }
+
+  body {
+    background-color: #FBF8F3;
+    color: #1c1c18;
+    font-family: 'Karla', sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, .font-headline {
+    font-family: 'Literata', serif;
+  }
+
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* Modern Card Styling with Soft Warm Depth */
+.modern-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(180, 83, 9, 0.08);
+  border-radius: 0.875rem;
+  box-shadow: 0 4px 20px -2px rgba(180, 83, 9, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modern-card-hover:hover {
+  border-color: rgba(180, 83, 9, 0.22);
+  box-shadow: 0 10px 30px -4px rgba(180, 83, 9, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+  transform: translateY(-1px);
+}
+
+/* Warm Glassmorphism */
+.warm-glass {
+  background: rgba(253, 249, 243, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(229, 221, 208, 0.7);
+}
+
+/* Subtle Warm Ambient Glows */
+.glow-terracotta {
+  box-shadow: 0 0 35px -5px rgba(180, 83, 9, 0.18);
+}
+
+.glow-olive {
+  box-shadow: 0 0 35px -5px rgba(77, 124, 15, 0.18);
+}
+
+/* Architectural subtle offset shadow for active cards */
+.ledger-offset-shadow {
+  box-shadow: 0 3px 12px -2px rgba(144, 63, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.02);
+}
+
+.ledger-offset-active {
+  box-shadow: 0 0 0 2px #b45309, 0 8px 20px -4px rgba(180, 83, 9, 0.15);
+}
+
+/* Custom scrollbar matching warm cream palette */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f5efe6;
+}
+::-webkit-scrollbar-thumb {
+  background: #d8c6b1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b45309;
+}
+
+/* Print Styles for official cooperative reports */
+@media print {
+  aside, header, nav, .no-print {
+    display: none !important;
+  }
+  body, main {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

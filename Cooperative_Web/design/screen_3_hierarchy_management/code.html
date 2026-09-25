@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillsKart Federation Hub - Hierarchy Management</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Literata (Serif Display/Headings) and Karla (Humanist Sans) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300..800;1,300..800&amp;family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-lowest": "#ffffff",
+            "primary-fixed-dim": "#ffb68e",
+            "tertiary-fixed": "#bbf37c",
+            "background": "#fdf9f3",
+            "on-primary-container": "#fff1eb",
+            "surface": "#fdf9f3",
+            "error": "#ba1a1a",
+            "inverse-surface": "#31302d",
+            "on-secondary-fixed-variant": "#832600",
+            "outline-variant": "#ddc1b3",
+            "on-tertiary-fixed-variant": "#2e4f00",
+            "primary-fixed": "#ffdbca",
+            "on-primary-fixed-variant": "#763300",
+            "on-secondary-container": "#5d1900",
+            "on-error": "#ffffff",
+            "surface-tint": "#9b4500",
+            "surface-container-highest": "#e6e2dc",
+            "error-container": "#ffdad6",
+            "secondary-fixed": "#ffdbd0",
+            "tertiary-fixed-dim": "#a0d663",
+            "on-surface-variant": "#564338",
+            "on-background": "#1c1c18",
+            "tertiary": "#396200",
+            "surface-bright": "#fdf9f3",
+            "surface-container-low": "#f7f3ed",
+            "on-tertiary-container": "#dfffb7",
+            "on-surface": "#1c1c18",
+            "surface-container": "#f1ede7",
+            "on-tertiary-fixed": "#0f2000",
+            "primary-container": "#b45309",
+            "on-secondary-fixed": "#390c00",
+            "secondary": "#ac3400",
+            "surface-variant": "#e6e2dc",
+            "tertiary-container": "#4d7c0f",
+            "secondary-container": "#fd6b36",
+            "secondary-fixed-dim": "#ffb59d",
+            "on-primary": "#ffffff",
+            "outline": "#897267",
+            "inverse-on-surface": "#f4f0ea",
+            "on-tertiary": "#ffffff",
+            "on-error-container": "#93000a",
+            "primary": "#903f00",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#ffb68e",
+            "on-primary-fixed": "#331200",
+            "surface-dim": "#dddad4",
+            "surface-container-high": "#ebe8e2"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-mobile": "1rem",
+            "gutter-mobile": "0.75rem",
+            "space-sm": "0.5rem",
+            "margin": "2rem",
+            "space-xl": "2rem",
+            "space-md": "0.75rem",
+            "space-lg": "1.25rem",
+            "gutter": "1.25rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Karla"],
+            "display-lg": ["Literata"],
+            "headline-sm": ["Literata"],
+            "headline-lg": ["Literata"],
+            "body-md": ["Karla"],
+            "title-lg": ["Literata"],
+            "headline-lg-mobile": ["Literata"],
+            "headline-md": ["Literata"],
+            "label-md": ["Karla"],
+            "title-md": ["Karla"],
+            "label-sm": ["Karla"],
+            "body-sm": ["Karla"],
+            "display-lg-mobile": ["Literata"],
+            "label-lg": ["Karla"]
+          },
+          "fontSize": {
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed antialiased">
+<!-- TOP APP BAR -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-bright border-b border-outline-variant shadow-sm h-14">
+<div class="flex justify-between items-center w-full px-space-lg h-14">
+<!-- Left Anchor: Brand and Federation Identity -->
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-sm bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="account_balance">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-lg font-title-lg font-bold text-primary tracking-tight">SkillsKart Federation Hub</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Apex Sovereign Ledger • Est. 1952</span>
+</div>
+</div>
+<!-- Center Primary Navigation -->
+<nav class="hidden md:flex items-center gap-space-lg h-full">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface transition-colors duration-150 flex items-center h-full" href="#">
+          Federation Ledger
+        </a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface transition-colors duration-150 flex items-center h-full" href="#">
+          Union Clusters
+        </a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface transition-colors duration-150 flex items-center h-full" href="#">
+          Labour Vault
+        </a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface transition-colors duration-150 flex items-center h-full" href="#">
+          Grievances
+        </a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-on-surface transition-colors duration-150 flex items-center h-full" href="#">
+          Audit Logs
+        </a>
+</nav>
+<!-- Right Action Suite & SOS Flag -->
+<div class="flex items-center gap-space-md">
+<!-- Emergency SOS Badge Button -->
+<button class="flex items-center gap-space-xs bg-secondary text-on-secondary px-space-md py-1 rounded-sm font-label-md text-label-md uppercase tracking-wider hover:bg-on-secondary-container transition-all shadow-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="warning">warning</span>
+<span>Emergency SOS (0)</span>
+</button>
+<!-- Batch Commit Authority Action -->
+<button class="hidden lg:flex items-center gap-space-xs bg-inverse-surface text-inverse-on-surface px-space-md py-1 rounded-sm font-title-md text-title-md hover:bg-black transition-all">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified">verified</span>
+<span>Batch Commit</span>
+</button>
+<!-- Quick Utility Icons -->
+<div class="flex items-center border-l border-outline-variant pl-space-sm gap-1">
+<button class="p-1.5 rounded-sm text-on-surface-variant hover:bg-surface-container transition-colors" title="Notifications">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+</button>
+<button class="p-1.5 rounded-sm text-on-surface-variant hover:bg-surface-container transition-colors" title="Help Center">
+<span class="material-symbols-outlined text-[20px]" data-icon="help_center">help_center</span>
+</button>
+</div>
+<!-- Logged-in Chief Registrar Seal Profile -->
+<div class="flex items-center gap-space-sm pl-space-xs">
+<div class="w-8 h-8 rounded-sm bg-surface-container-high border border-outline flex items-center justify-center text-primary font-bold overflow-hidden" title="Chief Registrar Federation Seal and Profile Avatar">
+<span class="material-symbols-outlined text-[20px]" data-icon="shield_person">shield_person</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- SIDE NAVIGATION RAIL -->
+<aside class="fixed top-14 left-0 h-[calc(100vh-3.5rem)] w-[260px] bg-surface-container-lowest border-r border-outline-variant z-40 hidden md:block">
+<div class="flex flex-col justify-between w-[260px] h-full p-space-md">
+<!-- Upper Section: Federation Tier Context + Navigation Links -->
+<div class="flex flex-col gap-space-md">
+<!-- Zonal Crest Header Banner -->
+<div class="p-space-md bg-surface-container-low border border-outline-variant rounded-sm flex items-center gap-space-sm">
+<div class="w-9 h-9 bg-primary text-on-primary rounded-sm flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]" data-icon="corporate_fare">corporate_fare</span>
+</div>
+<div class="flex flex-col overflow-hidden">
+<span class="font-title-md text-title-md text-on-surface leading-tight truncate">Labour Federation Tier 1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Apex National Directorate</span>
+</div>
+</div>
+<!-- Navigation Links Stack -->
+<div class="flex flex-col gap-1">
+<!-- Artisan Registry -->
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-low px-space-md py-space-sm rounded-sm flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="badge">badge</span>
+<span>Artisan Registry</span>
+</a>
+<!-- Cluster Operations -->
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-low px-space-md py-space-sm rounded-sm flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="workspaces">workspaces</span>
+<span>Cluster Operations</span>
+</a>
+<!-- Wage Settlement -->
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-low px-space-md py-space-sm rounded-sm flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="payments">payments</span>
+<span>Wage Settlement</span>
+</a>
+<!-- Provident Ledger -->
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-low px-space-md py-space-sm rounded-sm flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="menu_book">menu_book</span>
+<span>Provident Ledger</span>
+</a>
+<!-- Federation Hierarchy (ACTIVE INTENT TAB) -->
+<a class="bg-surface-container-high text-primary font-title-md text-title-md border-l-4 border-primary rounded-sm px-space-md py-space-sm flex items-center gap-space-sm" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="account_tree">account_tree</span>
+<span>Hierarchy (States &amp; Dist)</span>
+</a>
+<!-- System Governance -->
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-low px-space-md py-space-sm rounded-sm flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="admin_panel_settings">admin_panel_settings</span>
+<span>System Governance</span>
+</a>
+</div>
+<!-- Contextual CTA: File Grievance -->
+<button class="mt-2 w-full flex items-center justify-center gap-space-xs bg-surface-container-lowest border border-outline hover:border-primary text-on-surface px-space-md py-2 rounded-sm font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="gavel">gavel</span>
+<span>File Grievance</span>
+</button>
+</div>
+<!-- Lower Section: Archival & Ledger Settings -->
+<div class="flex flex-col gap-1 border-t border-outline-variant pt-space-md">
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-low px-space-md py-1.5 rounded-sm flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[16px]" data-icon="archive">archive</span>
+<span>Archival Docs</span>
+</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-low px-space-md py-1.5 rounded-sm flex items-center gap-space-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[16px]" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<div class="mt-2 px-space-md py-1 bg-surface-container-low rounded text-[10px] text-on-surface-variant font-mono flex items-center justify-between border border-outline-variant">
+<span>SYNC: ACTIVE</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+</div>
+</div>
+</div>
+</aside>
+<!-- MAIN CANVAS CONTAINER -->
+<main class="md:ml-[260px] pt-14 min-h-screen bg-background pb-space-xl">
+<div class="p-4 md:p-8 max-w-[1440px] mx-auto flex flex-col gap-space-xl">
+<!-- HIERARCHY TIER POSITION BANNER & BREADCRUMB STRIP -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-sm p-space-lg shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md border-b border-outline-variant">
+<div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-1">
+<span class="font-bold text-primary">Federation Jurisdiction</span>
+<span>•</span>
+<span>National Directorate Tier 1</span>
+<span>•</span>
+<span class="text-tertiary font-bold">Consensus Live</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Hierarchy Management &amp; Directorate Control</h1>
+</div>
+<!-- Active Tier Indicator Tag -->
+<div class="flex items-center gap-space-sm bg-surface-container px-space-md py-space-sm rounded-sm border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="lan">lan</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">OPERATIONAL SCOPE</span>
+<span class="font-title-md text-title-md text-on-surface">Managing 28 State Federations (Tier 2)</span>
+</div>
+</div>
+</div>
+<!-- Interactive Visual Hierarchy Ladder -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm pt-space-md">
+<!-- Step 1: Apex -->
+<div class="p-space-sm bg-surface-container-low border border-outline-variant rounded-sm flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-sm bg-inverse-surface text-inverse-on-surface flex items-center justify-center font-bold text-xs">1</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">YOU ARE HERE</span>
+<span class="font-title-md text-title-md text-on-surface">National Apex Directorate</span>
+</div>
+</div>
+<!-- Step 2: State -->
+<div class="p-space-sm bg-surface-container-high border-2 border-primary rounded-sm flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-sm bg-primary text-on-primary flex items-center justify-center font-bold text-xs">2</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">MANAGING TARGET</span>
+<span class="font-title-md text-title-md text-on-surface">State Federations (28)</span>
+</div>
+</div>
+<!-- Step 3: District -->
+<div class="p-space-sm bg-surface-container-low border border-outline-variant opacity-80 rounded-sm flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-sm bg-outline text-surface-bright flex items-center justify-center font-bold text-xs">3</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">SUBORDINATE DELEGATION</span>
+<span class="font-title-md text-title-md text-on-surface">District Federations (742)</span>
+</div>
+</div>
+<!-- Step 4: Primary Society -->
+<div class="p-space-sm bg-surface-container-low border border-outline-variant opacity-80 rounded-sm flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-sm bg-outline text-surface-bright flex items-center justify-center font-bold text-xs">4</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">GRASSROOTS REPOSITORIES</span>
+<span class="font-title-md text-title-md text-on-surface">Primary Labour Societies</span>
+</div>
+</div>
+</div>
+</section>
+<!-- KPI METRICS SUMMARY IN EDITORIAL SERIF (LITERATA) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-space-lg rounded-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-md text-label-md uppercase tracking-wider">Active State Nodes</span>
+<span class="material-symbols-outlined text-[20px] text-primary" data-icon="domain">domain</span>
+</div>
+<div class="font-display-lg text-display-lg text-on-surface font-headline-lg">28</div>
+<div class="mt-2 text-body-sm font-body-sm text-tertiary flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[16px]" data-icon="check_circle">check_circle</span>
+<span>100% Recognized by Central Registry</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-space-lg rounded-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-md text-label-md uppercase tracking-wider">Operational Districts</span>
+<span class="material-symbols-outlined text-[20px] text-primary" data-icon="location_city">location_city</span>
+</div>
+<div class="font-display-lg text-display-lg text-on-surface font-headline-lg">742</div>
+<div class="mt-2 text-body-sm font-body-sm text-on-surface-variant">
+<span>Directly reporting via District Nodes</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-space-lg rounded-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-md text-label-md uppercase tracking-wider">Primary Societies</span>
+<span class="material-symbols-outlined text-[20px] text-primary" data-icon="groups">groups</span>
+</div>
+<div class="font-display-lg text-display-lg text-on-surface font-headline-lg">12,400</div>
+<div class="mt-2 text-body-sm font-body-sm text-on-surface-variant">
+<span>Aggregated sovereign cooperatives</span>
+</div>
+</div>
+<!-- Metric 4: Decentralization Protocol -->
+<div class="bg-surface-container-lowest border border-outline-variant p-space-lg rounded-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-label-md text-label-md uppercase tracking-wider">Decentralization Rate</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary" data-icon="bolt">bolt</span>
+</div>
+<div class="font-display-lg text-display-lg text-tertiary font-headline-lg">100%</div>
+<div class="mt-2 text-body-sm font-body-sm text-tertiary flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[16px]" data-icon="speed">speed</span>
+<span>Zero intermediary confirmation delay</span>
+</div>
+</div>
+</section>
+<!-- STREAMLINED NODE CREATION: DIRECT RECORD CREATION (NO KYC / IMMEDIATE ACTIVATION) -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-sm overflow-hidden shadow-sm">
+<!-- Section Header -->
+<div class="bg-surface-container-low px-space-lg py-space-md border-b border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]" data-icon="add_circle">add_circle</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Provision New State Federation Directorate</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct jurisdictional entry into the national cooperative ledger.</p>
+</div>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed px-space-sm py-0.5 rounded-sm font-label-sm text-label-sm font-bold uppercase tracking-wider">
+            Tier 2 Sovereign Registry
+          </span>
+</div>
+<!-- MANDATORY CONSTRAINT CALLOUT: IMMEDIATE SOVEREIGN ACTIVATION BANNER -->
+<div class="bg-primary-fixed-dim/20 border-b border-outline-variant p-space-md flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5" data-icon="lock_clock">lock_clock</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Immediate Sovereign Activation Guarantee</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Newly registered federation nodes are cryptographically ledger-stamped and granted active operational status instantaneously. Under federation bylaws, this action bypasses administrative approval workflows, requires zero document upload or KYC steps, and permits immediate district-level operations.
+            </p>
+</div>
+</div>
+<!-- Form Body -->
+<form class="p-space-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md" onsubmit="event.preventDefault();">
+<!-- Node Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-bold">Federation Node Name</label>
+<input class="bg-surface-container-lowest border border-outline rounded-sm px-space-md py-2 text-on-surface focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container font-body-md text-body-md" placeholder="e.g. Telangana Rajya Shramik Union" required="" type="text"/>
+</div>
+<!-- State / Region -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-bold">State / Regional Territory</label>
+<select class="bg-surface-container-lowest border border-outline rounded-sm px-space-md py-2 text-on-surface focus:outline-none focus:border-primary-container font-body-md text-body-md">
+<option>Telangana (Western/Southern Zone)</option>
+<option>Rajasthan (Northern Zone)</option>
+<option>Kerala (Southern Zone)</option>
+<option>Assam (North-Eastern Zone)</option>
+<option>Odisha (Eastern Zone)</option>
+<option>Madhya Pradesh (Central Zone)</option>
+</select>
+</div>
+<!-- Sovereign Co-op Registration Number -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-bold">Sovereign Co-op Registration Number</label>
+<input class="bg-surface-container-lowest border border-outline rounded-sm px-space-md py-2 text-on-surface focus:outline-none focus:border-primary-container font-body-md text-body-md" placeholder="IND-FED-2024-XXXX" required="" type="text"/>
+</div>
+<!-- Official Contact Person / Delegate -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-bold">Official Contact Person (Delegate)</label>
+<input class="bg-surface-container-lowest border border-outline rounded-sm px-space-md py-2 text-on-surface focus:outline-none focus:border-primary-container font-body-md text-body-md" placeholder="e.g. Ananya Venkatesh" required="" type="text"/>
+</div>
+<!-- Registrar Phone / Official Email -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-bold">Registrar Contact (Phone / Email)</label>
+<input class="bg-surface-container-lowest border border-outline rounded-sm px-space-md py-2 text-on-surface focus:outline-none focus:border-primary-container font-body-md text-body-md" placeholder="+91 98400 11223 / registrar@fed.org" required="" type="text"/>
+</div>
+<!-- Initial District Allocation -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-bold">Initial District Allocation Count</label>
+<input class="bg-surface-container-lowest border border-outline rounded-sm px-space-md py-2 text-on-surface focus:outline-none focus:border-primary-container font-body-md text-body-md" max="75" min="1" required="" type="number" value="12"/>
+</div>
+<!-- Directorate Office Address (Span full width) -->
+<div class="flex flex-col gap-1 lg:col-span-3">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-bold">State Directorate Physical Secretariat Address</label>
+<input class="bg-surface-container-lowest border border-outline rounded-sm px-space-md py-2 text-on-surface focus:outline-none focus:border-primary-container font-body-md text-body-md" placeholder="Federation Bhavan, Sector 4, Administrative Complex, Capital City" required="" type="text"/>
+</div>
+<!-- Form Action Button: Primary Terracotta variant -->
+<div class="lg:col-span-3 flex justify-end items-center gap-space-md pt-space-sm border-t border-outline-variant">
+<button class="px-space-lg py-2 border border-outline text-on-surface rounded-sm hover:bg-surface-container font-title-md text-title-md transition-colors" type="reset">
+              Clear Inputs
+            </button>
+<button class="bg-primary-container hover:bg-[#92400E] text-on-primary px-space-xl py-2 rounded-sm font-title-md text-title-md flex items-center gap-space-sm shadow-sm transition-transform active:scale-[0.98]" type="submit">
+<span class="material-symbols-outlined text-[20px]" data-icon="verified_user">verified_user</span>
+<span>Register &amp; Activate State Node</span>
+</button>
+</div>
+</form>
+</section>
+<!-- ACTIVE FEDERATED STATE DIRECTORATES LEDGER TABLE -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-sm overflow-hidden shadow-sm flex flex-col">
+<!-- Table Control Toolbar -->
+<div class="p-space-md bg-surface-container-low border-b border-outline-variant flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
+<!-- Title & Count -->
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="account_balance">account_balance</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Active Federated State Directorates</h3>
+<span class="bg-surface-container-high px-2 py-0.5 rounded font-mono text-xs font-bold text-on-surface border border-outline-variant">28 Total</span>
+</div>
+<!-- Search & Zonal Filter Bar -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Search Field -->
+<div class="relative flex-1 sm:w-64">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[18px] text-outline" data-icon="search">search</span>
+<input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-lowest border border-outline rounded-sm font-body-sm text-body-sm focus:outline-none focus:border-primary-container" placeholder="Search state, delegate, ID..." type="text"/>
+</div>
+<!-- Zonal Directorate Filter -->
+<select class="bg-surface-container-lowest border border-outline rounded-sm px-space-md py-1.5 font-body-sm text-body-sm focus:outline-none focus:border-primary-container">
+<option value="all">All Zonal Directorates</option>
+<option value="western">Western Zonal Directorate</option>
+<option value="southern">Southern Zonal Directorate</option>
+<option value="northern">Northern Zonal Directorate</option>
+<option value="eastern">Eastern Zonal Directorate</option>
+<option value="northeastern">North-Eastern Zonal Directorate</option>
+</select>
+<!-- Export Registry Ledger -->
+<button class="bg-surface-container-lowest border border-outline hover:bg-surface-container-high px-space-sm py-1.5 rounded-sm flex items-center gap-1 text-on-surface font-label-md text-label-md" title="Export Ledger">
+<span class="material-symbols-outlined text-[16px]" data-icon="download">download</span>
+<span class="hidden sm:inline">Export</span>
+</button>
+</div>
+</div>
+<!-- Dense Architectural Ledger Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high border-b border-outline-variant text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md font-bold">Node ID</th>
+<th class="py-space-sm px-space-md font-bold">Federation Entity Name</th>
+<th class="py-space-sm px-space-md font-bold">Zonal Jurisdiction</th>
+<th class="py-space-sm px-space-md font-bold">Primary Registrar / Delegate</th>
+<th class="py-space-sm px-space-md font-bold text-center">Districts</th>
+<th class="py-space-sm px-space-md font-bold text-center">Societies</th>
+<th class="py-space-sm px-space-md font-bold text-right">Active Artisans</th>
+<th class="py-space-sm px-space-md font-bold text-center">Status</th>
+<th class="py-space-sm px-space-md font-bold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant font-body-md text-body-md">
+<!-- Row 1: Maharashtra -->
+<tr class="hover:bg-surface-container-low transition-colors duration-100">
+<td class="py-space-sm px-space-md font-mono text-xs text-on-surface-variant font-bold">FED-MH-01</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Maharashtra State Labour Federation</span>
+<span class="text-xs text-on-surface-variant">Reg #MH/COOP/BOM/1961/44</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-surface-container px-2 py-0.5 rounded text-xs text-on-surface font-medium border border-outline-variant">Western Zone</span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Shri Suresh K. Deshmukh</span>
+<span class="text-xs text-on-surface-variant">+91 98200 44331</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center font-mono font-bold">36</td>
+<td class="py-space-sm px-space-md text-center font-mono">1,840</td>
+<td class="py-space-sm px-space-md text-right font-mono font-bold text-primary">142,500</td>
+<td class="py-space-sm px-space-md text-center">
+<span class="inline-flex items-center gap-1 bg-[#F2F7EC] text-[#365314] border border-[#84CC16] px-2 py-0.5 rounded-sm font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-[#4D7C0F]"></span>
+                    Active Node
+                  </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-2">
+<a class="text-primary font-bold hover:underline text-xs flex items-center gap-0.5" href="#">
+<span>Districts</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+</a>
+<button class="text-on-surface-variant hover:text-on-surface p-1" title="Audit Trail">
+<span class="material-symbols-outlined text-[16px]" data-icon="history_edu">history_edu</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface p-1" title="Node Settings">
+<span class="material-symbols-outlined text-[16px]" data-icon="tune">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Karnataka -->
+<tr class="hover:bg-surface-container-low transition-colors duration-100">
+<td class="py-space-sm px-space-md font-mono text-xs text-on-surface-variant font-bold">FED-KA-02</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Karnataka State Co-op Union</span>
+<span class="text-xs text-on-surface-variant">Reg #KAR/BLR/FED/1974/89</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-surface-container px-2 py-0.5 rounded text-xs text-on-surface font-medium border border-outline-variant">Southern Zone</span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Dr. M. Basavaraj</span>
+<span class="text-xs text-on-surface-variant">+91 94480 22100</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center font-mono font-bold">31</td>
+<td class="py-space-sm px-space-md text-center font-mono">1,210</td>
+<td class="py-space-sm px-space-md text-right font-mono font-bold text-primary">98,240</td>
+<td class="py-space-sm px-space-md text-center">
+<span class="inline-flex items-center gap-1 bg-[#F2F7EC] text-[#365314] border border-[#84CC16] px-2 py-0.5 rounded-sm font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-[#4D7C0F]"></span>
+                    Active Node
+                  </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-2">
+<a class="text-primary font-bold hover:underline text-xs flex items-center gap-0.5" href="#">
+<span>Districts</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+</a>
+<button class="text-on-surface-variant hover:text-on-surface p-1" title="Audit Trail">
+<span class="material-symbols-outlined text-[16px]" data-icon="history_edu">history_edu</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface p-1" title="Node Settings">
+<span class="material-symbols-outlined text-[16px]" data-icon="tune">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Tamil Nadu -->
+<tr class="hover:bg-surface-container-low transition-colors duration-100">
+<td class="py-space-sm px-space-md font-mono text-xs text-on-surface-variant font-bold">FED-TN-03</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Tamil Nadu Apex Artisans Society</span>
+<span class="text-xs text-on-surface-variant">Reg #TN/CHN/ART/1958/12</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-surface-container px-2 py-0.5 rounded text-xs text-on-surface font-medium border border-outline-variant">Southern Zone</span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Selvi K. Meenakshi</span>
+<span class="text-xs text-on-surface-variant">+91 98410 99881</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center font-mono font-bold">38</td>
+<td class="py-space-sm px-space-md text-center font-mono">1,450</td>
+<td class="py-space-sm px-space-md text-right font-mono font-bold text-primary">116,800</td>
+<td class="py-space-sm px-space-md text-center">
+<span class="inline-flex items-center gap-1 bg-[#F2F7EC] text-[#365314] border border-[#84CC16] px-2 py-0.5 rounded-sm font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-[#4D7C0F]"></span>
+                    Active Node
+                  </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-2">
+<a class="text-primary font-bold hover:underline text-xs flex items-center gap-0.5" href="#">
+<span>Districts</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+</a>
+<button class="text-on-surface-variant hover:text-on-surface p-1" title="Audit Trail">
+<span class="material-symbols-outlined text-[16px]" data-icon="history_edu">history_edu</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface p-1" title="Node Settings">
+<span class="material-symbols-outlined text-[16px]" data-icon="tune">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Uttar Pradesh -->
+<tr class="hover:bg-surface-container-low transition-colors duration-100">
+<td class="py-space-sm px-space-md font-mono text-xs text-on-surface-variant font-bold">FED-UP-04</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Uttar Pradesh Shramik Sangh</span>
+<span class="text-xs text-on-surface-variant">Reg #UP/LKO/SHR/1982/104</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-surface-container px-2 py-0.5 rounded text-xs text-on-surface font-medium border border-outline-variant">Northern Zone</span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Shri Ramveer Singh</span>
+<span class="text-xs text-on-surface-variant">+91 94150 77312</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center font-mono font-bold">75</td>
+<td class="py-space-sm px-space-md text-center font-mono">2,180</td>
+<td class="py-space-sm px-space-md text-right font-mono font-bold text-primary">204,110</td>
+<td class="py-space-sm px-space-md text-center">
+<span class="inline-flex items-center gap-1 bg-[#F2F7EC] text-[#365314] border border-[#84CC16] px-2 py-0.5 rounded-sm font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-[#4D7C0F]"></span>
+                    Active Node
+                  </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-2">
+<a class="text-primary font-bold hover:underline text-xs flex items-center gap-0.5" href="#">
+<span>Districts</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+</a>
+<button class="text-on-surface-variant hover:text-on-surface p-1" title="Audit Trail">
+<span class="material-symbols-outlined text-[16px]" data-icon="history_edu">history_edu</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface p-1" title="Node Settings">
+<span class="material-symbols-outlined text-[16px]" data-icon="tune">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Gujarat -->
+<tr class="hover:bg-surface-container-low transition-colors duration-100">
+<td class="py-space-sm px-space-md font-mono text-xs text-on-surface-variant font-bold">FED-GJ-05</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">Gujarat Rajya Karigar Mandal</span>
+<span class="text-xs text-on-surface-variant">Reg #GJ/AHM/FED/1969/33</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-surface-container px-2 py-0.5 rounded text-xs text-on-surface font-medium border border-outline-variant">Western Zone</span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Shri Hasmukhbhai Patel</span>
+<span class="text-xs text-on-surface-variant">+91 98250 33411</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center font-mono font-bold">33</td>
+<td class="py-space-sm px-space-md text-center font-mono">1,120</td>
+<td class="py-space-sm px-space-md text-right font-mono font-bold text-primary">94,300</td>
+<td class="py-space-sm px-space-md text-center">
+<span class="inline-flex items-center gap-1 bg-[#F2F7EC] text-[#365314] border border-[#84CC16] px-2 py-0.5 rounded-sm font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-[#4D7C0F]"></span>
+                    Active Node
+                  </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-2">
+<a class="text-primary font-bold hover:underline text-xs flex items-center gap-0.5" href="#">
+<span>Districts</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+</a>
+<button class="text-on-surface-variant hover:text-on-surface p-1" title="Audit Trail">
+<span class="material-symbols-outlined text-[16px]" data-icon="history_edu">history_edu</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface p-1" title="Node Settings">
+<span class="material-symbols-outlined text-[16px]" data-icon="tune">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: West Bengal -->
+<tr class="hover:bg-surface-container-low transition-colors duration-100">
+<td class="py-space-sm px-space-md font-mono text-xs text-on-surface-variant font-bold">FED-WB-06</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-bold">West Bengal Labour Co-op Union</span>
+<span class="text-xs text-on-surface-variant">Reg #WB/CAL/LBR/1971/08</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="bg-surface-container px-2 py-0.5 rounded text-xs text-on-surface font-medium border border-outline-variant">Eastern Zone</span>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Dr. Subhashish Roy</span>
+<span class="text-xs text-on-surface-variant">+91 98300 55122</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-center font-mono font-bold">23</td>
+<td class="py-space-sm px-space-md text-center font-mono">940</td>
+<td class="py-space-sm px-space-md text-right font-mono font-bold text-primary">76,400</td>
+<td class="py-space-sm px-space-md text-center">
+<span class="inline-flex items-center gap-1 bg-[#F2F7EC] text-[#365314] border border-[#84CC16] px-2 py-0.5 rounded-sm font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-[#4D7C0F]"></span>
+                    Active Node
+                  </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-2">
+<a class="text-primary font-bold hover:underline text-xs flex items-center gap-0.5" href="#">
+<span>Districts</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+</a>
+<button class="text-on-surface-variant hover:text-on-surface p-1" title="Audit Trail">
+<span class="material-symbols-outlined text-[16px]" data-icon="history_edu">history_edu</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface p-1" title="Node Settings">
+<span class="material-symbols-outlined text-[16px]" data-icon="tune">tune</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Ledger Footer / Pagination -->
+<div class="p-space-md bg-surface-container-low border-t border-outline-variant flex flex-col sm:flex-row items-center justify-between gap-space-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span>Showing 1 to 6 of 28 Active Federated State Directorates</span>
+<span>•</span>
+<span class="font-mono text-xs">All records ledger-stamped</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 bg-surface-container-lowest border border-outline rounded-sm hover:bg-surface-container font-mono text-xs disabled:opacity-50" disabled="">PREV</button>
+<button class="px-2.5 py-1 bg-primary text-on-primary rounded-sm font-mono text-xs font-bold">1</button>
+<button class="px-2.5 py-1 bg-surface-container-lowest border border-outline rounded-sm hover:bg-surface-container font-mono text-xs">2</button>
+<button class="px-2.5 py-1 bg-surface-container-lowest border border-outline rounded-sm hover:bg-surface-container font-mono text-xs">3</button>
+<button class="px-2.5 py-1 bg-surface-container-lowest border border-outline rounded-sm hover:bg-surface-container font-mono text-xs">4</button>
+<button class="px-2 py-1 bg-surface-container-lowest border border-outline rounded-sm hover:bg-surface-container font-mono text-xs">NEXT</button>
+</div>
+</div>
+</section>
+<!-- REGISTRATION FOOTNOTE & COOPERATIVE SEAL -->
+<footer class="border-t border-outline-variant pt-space-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary" data-icon="verified">verified</span>
+<span>Federation Sovereign Ledger Operating under National Multi-State Cooperative Societies Framework.</span>
+</div>
+<div class="flex items-center gap-space-lg text-xs font-mono">
+<span>CONSENSUS: 28/28 STATES STAMPED</span>
+<span>LATENCY: 0.04s</span>
+</div>
+</footer>
+</div>
+</main>
+</body></html>
