@@ -4,31 +4,33 @@
 
 ### Your Skill. Your Shop. Your Say.
 
-A cooperative-owned digital marketplace connecting **consumers** with verified **gig workers, artisans, businesses, and community organizations** — governed end-to-end by India's Labour Cooperative Federations and Societies.
+A cooperative-owned digital marketplace connecting **consumers** with verified **gig workers, artisans, businesses, and community organizations**, governed end-to-end by India's Labour Cooperative Federations and Societies.
 
-Built for **SIH26089 — Cooperative Gig Services Platform for Household & Community Services**
-
-<br/>
-
-![Last Commit](https://img.shields.io/github/last-commit/ansh-kukreja/SkillsKart?style=flat-square&color=B45309&label=last%20commit)
-![Repo Size](https://img.shields.io/github/repo-size/ansh-kukreja/SkillsKart?style=flat-square&color=B45309&label=repo%20size)
-![Top Language](https://img.shields.io/github/languages/top/ansh-kukreja/SkillsKart?style=flat-square&color=B45309&label=top%20language)
-![Languages](https://img.shields.io/github/languages/count/ansh-kukreja/SkillsKart?style=flat-square&color=B45309&label=languages)
-
-![Status](https://img.shields.io/badge/status-prototype-orange?style=flat-square)
-![License](https://img.shields.io/badge/license-none%20yet-lightgrey?style=flat-square)
-![Flutter](https://img.shields.io/badge/Flutter-Dart-02569B?style=flat-square&logo=flutter&logoColor=white)
-![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-Vite-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+Built for **SIH26089: Cooperative Gig Services Platform for Household & Community Services**
 
 <br/>
 
-**Jump straight to an app** — presented in the order a real user meets them: **consumer → worker → cooperative**
+![Repo Size](https://img.shields.io/github/repo-size/ansh-kukreja/SkillsKart?style=for-the-badge&color=8B5CF6&label=REPO%20SIZE)
+![Top Language](https://img.shields.io/github/languages/top/ansh-kukreja/SkillsKart?style=for-the-badge&color=F59E0B&label=TOP%20LANGUAGE)
+![Languages](https://img.shields.io/github/languages/count/ansh-kukreja/SkillsKart?style=for-the-badge&color=10B981&label=LANGUAGES)
+
+![Status](https://img.shields.io/badge/STATUS-PROTOTYPE-F97316?style=for-the-badge)
+![License](https://img.shields.io/badge/LICENSE-NONE%20YET-6B7280?style=for-the-badge)
+
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+
+<br/>
+
+**Jump straight to an app**, presented in the order a real user meets them: **consumer → worker → cooperative**
 
 [![Consumer App](https://img.shields.io/badge/📱_Consumer_App-FF6B35?style=for-the-badge&logoColor=white)](#-consumer-app)
 [![Worker App](https://img.shields.io/badge/👷_Worker_App-1E3A15?style=for-the-badge&logoColor=white)](#-worker-app)
-[![Cooperative Web Console](https://img.shields.io/badge/🌐_Cooperative_Web_Console-0284C7?style=for-the-badge&logoColor=white)](#-website--cooperative-web-console)
+[![Cooperative Web Console](https://img.shields.io/badge/🌐_Cooperative_Web_Console-0284C7?style=for-the-badge&logoColor=white)](#-website-cooperative-web-console)
 
 </div>
 
@@ -43,11 +45,12 @@ Built for **SIH26089 — Cooperative Gig Services Platform for Household & Commu
 - [User Roles](#-user-roles)
 - [📱 Consumer App](#-consumer-app)
 - [👷 Worker App](#-worker-app)
-- [🌐 Website — Cooperative Web Console](#-website--cooperative-web-console)
+- [🌐 Website: Cooperative Web Console](#-website-cooperative-web-console)
 - [Flow Diagrams](#-flow-diagrams)
   - [Consumer Flow](#-consumer-flow)
   - [Worker Flow](#-worker-flow)
   - [Cooperative Flow](#-cooperative-flow)
+  - [How the three flows connect](#-how-the-three-flows-connect)
 - [System Architecture](#-system-architecture)
 - [Tech Stack](#-tech-stack)
 - [Project Structure](#-project-structure)
@@ -65,17 +68,17 @@ Built for **SIH26089 — Cooperative Gig Services Platform for Household & Commu
 
 ## 🌟 What is SkillsKart?
 
-Millions of skilled workers in India — electricians, plumbers, carpenters, painters, domestic helpers, caregivers, drivers, gardeners, cleaners, and technicians — work in the informal economy with no verified digital identity, no fair-wage guarantees, and no organized route to steady demand. Consumers, meanwhile, have no reliable way to find and trust these workers.
+Millions of skilled workers in India (electricians, plumbers, carpenters, painters, domestic helpers, caregivers, drivers, gardeners, cleaners, and technicians) work in the informal economy with no verified digital identity, no fair-wage guarantees, and no organized route to steady demand. Consumers, meanwhile, have no reliable way to find and trust these workers.
 
-SkillsKart closes that gap with a **consumer-facing marketplace** on one side, a **worker/partner app** on the other, and **Labour Cooperative Federations and Societies** — not a single private aggregator — governing verification, pricing, and welfare in between.
+SkillsKart closes that gap with a **consumer-facing marketplace** on one side, a **worker/partner app** on the other, and **Labour Cooperative Federations and Societies** (not a single private aggregator) governing verification, pricing, and welfare in between.
 
 ## 🎯 Problem We Solve
 
 - Consumers have no easy way to **discover and book** verified local service providers, hand-made products, part-time jobs, or community initiatives in one place.
 - Skilled workers lack a **verified, portable digital profile** that proves their trade and credibility.
-- There is no structured system for **fair, transparent pricing** — wages are often set unilaterally by demand-side platforms.
+- There is no structured system for **fair, transparent pricing**: wages are often set unilaterally by demand-side platforms.
 - Worker welfare schemes (insurance, social security) exist on paper but are **disconnected from where workers actually get discovered and hired**.
-- Cooperative federations and societies — the real-world bodies meant to protect workers — have **no digital tooling** to onboard, verify, and govern their members at scale.
+- Cooperative federations and societies, the real-world bodies meant to protect workers, have **no digital tooling** to onboard, verify, and govern their members at scale.
 
 ## 💡 Our Solution
 
@@ -85,20 +88,21 @@ SkillsKart is split into three purpose-built applications, presented here in the
 |---|---|---|---|
 | 1 | **📱 Consumer App** | Households, businesses | Discover and book services, browse jobs, shop artisan products, and take part in community programs |
 | 2 | **👷 Worker App** | Gig workers, product sellers, business owners, community organizations | A single "Partner Portal" where each of these four roles gets a dedicated workspace |
-| 3 | **🌐 Cooperative Web Console** | Cooperative Federations & Societies | Govern the network — approve members, set rate cards, monitor demand, and respond to emergencies |
+| 3 | **🌐 Cooperative Web Console** | Cooperative Federations & Societies | Govern the network: approve members, set rate cards, monitor demand, and respond to emergencies |
 
 ---
 
 ## 🏗️ SkillsKart Ecosystem
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1F2937','primaryTextColor':'#FFFFFF','primaryBorderColor':'#F97316','lineColor':'#F97316','secondaryColor':'#374151','tertiaryColor':'#111827','clusterBkg':'#111827','clusterBorder':'#F97316','edgeLabelBackground':'#111827'}}}%%
 flowchart TB
     subgraph Demand["📱 Consumer App"]
         NU["Normal User"]
         EU["Commercial / Enterprise User"]
     end
 
-    subgraph Partners["👷 Worker App — Partner Portal"]
+    subgraph Partners["👷 Worker App: Partner Portal"]
         GW["Gig Worker"]
         PS["Product Seller"]
         BO["Business Owner"]
@@ -122,26 +126,21 @@ flowchart TB
     SOC --> FED
 ```
 
-> **Reading note:** this diagram — and the rest of this README — follows the **consumer's journey first**. In the real onboarding sequence, a worker must already be verified by a Cooperative Society before a consumer ever sees them; the Cooperative Web Console is what makes that verification possible behind the scenes.
+> **Reading note:** this diagram, and the rest of this README, follows the **consumer's journey first**. In the real onboarding sequence, a worker must already be verified by a Cooperative Society before a consumer ever sees them; the Cooperative Web Console is what makes that verification possible behind the scenes.
 
 ## 👥 User Roles
 
 ### 🧑‍💼 Consumer
 Two account types, chosen at login:
-- **Normal User** — books individual services, applies to jobs, shops artisan products, and joins community initiatives.
-- **Commercial / Enterprise User** — everything a Normal User can do, plus **bulk service requisitions**: submitting multi-worker, multi-month contract requests (trade, headcount, duration, site, SLA tier) that are routed to a Cooperative Federation for review and worker deployment.
+- **Normal User**: books individual services, applies to jobs, shops artisan products, and joins community initiatives.
+- **Commercial / Enterprise User**: everything a Normal User can do, plus **bulk service requisitions**: submitting multi-worker, multi-month contract requests (trade, headcount, duration, site, SLA tier) that are routed to a Cooperative Federation for review and worker deployment.
 
-### 👷 Gig Worker
-Verifies their trade skill, gets listed under a Cooperative Society, and receives local service bookings through the Consumer App.
-
-### 🛍️ Product Seller
-Lists hand-crafted/artisan products with photos and pricing for consumers to browse and order through the Consumer App's Craft Store.
-
-### 🏢 Business Owner
-Posts local, part-time job openings that Normal Users can browse and apply to from the Consumer App's Jobs tab.
-
-### 🤝 Community Organization
-Posts community initiatives — such as blood donation camps and health drives — that consumers can discover and join through the Community Services section.
+### 👷 Worker
+Four workspaces, chosen at role selection in the Worker App:
+- **Gig Worker**: verifies their trade skill, gets listed under a Cooperative Society, and receives local service bookings through the Consumer App.
+- **Product Seller**: lists hand-crafted/artisan products with photos and pricing for consumers to browse and order through the Consumer App's Craft Store.
+- **Business Owner**: posts local, part-time job openings that Normal Users can browse and apply to from the Consumer App's Jobs tab.
+- **Community Organization**: posts community initiatives, such as blood donation camps and health drives, that consumers can discover and join through the Community Services section.
 
 ---
 
@@ -158,34 +157,30 @@ Posts community initiatives — such as blood donation camps and health drives �
 | **Craft Store** | Browse and order hand-crafted products listed by Product Sellers |
 | **Community Services** | Discover and join community drives (e.g. blood donation camps) posted by Community Organizations |
 
-<details>
-<summary><b>Enterprise-only flow — Bulk Booking</b></summary>
-<br/>
+**Enterprise-only flow: Bulk Booking**
 
 Commercial Users get an additional **Bulk Booking** sheet where they specify trade, worker count, contract duration, shift, site location, and SLA tier. The request is tracked through a federation-review lifecycle:
 
 `Submitted → Federation Review → Matchmaker Assigned → Approved → Deployed`
 
-</details>
-
 ## 👷 Worker App
 
 *Flutter app · "Partner Portal" · single role-selection screen routes to one of four dedicated workspaces*
 
-On launch, the Worker App presents a role picker — there is no separate login for each role; a partner simply selects their workspace:
+On launch, the Worker App presents a role picker. There is no separate login for each role; a partner simply selects their workspace:
 
-1. **Gig Worker** — verify skills, view bookings received from consumers
-2. **Product Seller** — list products with price and photos, manage orders
-3. **Business Owner** — post local job openings for consumers to apply to
-4. **Community Organization** — post community events (health camps, drives, etc.)
+1. **Gig Worker**: verify skills, view bookings received from consumers
+2. **Product Seller**: list products with price and photos, manage orders
+3. **Business Owner**: post local job openings for consumers to apply to
+4. **Community Organization**: post community events (health camps, drives, etc.)
 
 Each of the four roles opens into its own dedicated main screen with a role-appropriate bottom navigation, and a role-switch sheet lets a partner jump between workspaces without a full re-login.
 
-## 🌐 Website — Cooperative Web Console
+## 🌐 Website: Cooperative Web Console
 
 *React + TypeScript + Vite + Tailwind CSS single-page app*
 
-The website is **not a public marketing site** — it is the operational console used by **Cooperative Federations and Societies** to govern the network. Login offers two role types, **Cooperative Federation** (state/regional apex) and **Cooperative Society** (primary worker collective), each with a one-click demo account for instant access.
+The website is **not a public marketing site**: it is the operational console used by **Cooperative Federations and Societies** to govern the network. Login offers two role types, **Cooperative Federation** (state/regional apex) and **Cooperative Society** (primary worker collective), each with a one-click demo account for instant access.
 
 | Screen | Purpose |
 |---|---|
@@ -203,11 +198,12 @@ The website is **not a public marketing site** — it is the operational console
 
 ## 🔄 Flow Diagrams
 
-Three detailed flows — one per app, in the same consumer → worker → cooperative order as the rest of this README — followed by how they connect end to end.
+Three detailed flows, one per app, in the same consumer → worker → cooperative order as the rest of this README, followed by how they connect end to end.
 
 ### 📱 Consumer Flow
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1F2937','primaryTextColor':'#FFFFFF','primaryBorderColor':'#F97316','lineColor':'#F97316','secondaryColor':'#374151','tertiaryColor':'#111827','edgeLabelBackground':'#111827'}}}%%
 flowchart TD
     A[Open Consumer App] --> B{Login: choose account type}
     B -->|Normal User| C[Land on Services tab]
@@ -234,6 +230,7 @@ flowchart TD
 ### 👷 Worker Flow
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1F2937','primaryTextColor':'#FFFFFF','primaryBorderColor':'#F97316','lineColor':'#F97316','secondaryColor':'#374151','tertiaryColor':'#111827','edgeLabelBackground':'#111827'}}}%%
 flowchart TD
     A[Open Worker App] --> B["Role Selection screen\n(Partner Portal)"]
     B -->|Gig Worker| C[Gig Worker home]
@@ -261,6 +258,7 @@ flowchart TD
 ### 🌐 Cooperative Flow
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1F2937','primaryTextColor':'#FFFFFF','primaryBorderColor':'#F97316','lineColor':'#F97316','secondaryColor':'#374151','tertiaryColor':'#111827','edgeLabelBackground':'#111827'}}}%%
 flowchart TD
     A[Open Cooperative Web Console] --> B{Login: choose role}
     B -->|Cooperative Federation| C[Federation Dashboard]
@@ -281,11 +279,12 @@ flowchart TD
     D --> QQ
 ```
 
-> Enrolling a worker on the Society Dashboard is wired to automatically generate a cooperative member identity and activate their e-Shram and Group Health Insurance status — this is implemented as mock state (`AppContext`), not a live integration with government portals.
+> Enrolling a worker on the Society Dashboard is wired to automatically generate a cooperative member identity and activate their e-Shram and Group Health Insurance status. This is implemented as mock state (`AppContext`), not a live integration with government portals.
 
 ### 🔗 How the three flows connect
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1F2937','primaryTextColor':'#FFFFFF','primaryBorderColor':'#F97316','lineColor':'#F97316','secondaryColor':'#374151','tertiaryColor':'#111827','edgeLabelBackground':'#111827'}}}%%
 flowchart TB
     A["📱 Consumer App\nDiscover a service, product, job, or event"] --> B["Book / Apply / Order / Join"]
     B --> C["👷 Worker App\nGig Worker, Product Seller, Business Owner\nor Community Org fulfils the request"]
@@ -297,7 +296,7 @@ flowchart TB
 ```
 
 - **Emergency SOS:** when a consumer raises an SOS from the Consumer App, it is designed to surface directly in the Cooperative Web Console's Emergency SOS queue (`Open → Dispatched → Resolved`) so the responsible society/federation can dispatch a worker quickly.
-- **Bulk requests:** enterprise/commercial consumers needing multiple workers (e.g. for a construction site or institution) submit a requisition that a Cooperative Federation reviews and approves for deployment. Note the Consumer App's own status labels (`Submitted → Federation Review → Matchmaker Assigned → Approved → Deployed`) and the Web Console's Bulk Tenders labels (`Pending Review → Team Proposed → Confirmed`) are currently two independent mock-data models — they aren't wired to a shared backend yet, so the exact stage names differ between the two apps today.
+- **Bulk requests:** enterprise/commercial consumers needing multiple workers (e.g. for a construction site or institution) submit a requisition that a Cooperative Federation reviews and approves for deployment. Note the Consumer App's own status labels (`Submitted → Federation Review → Matchmaker Assigned → Approved → Deployed`) and the Web Console's Bulk Tenders labels (`Pending Review → Team Proposed → Confirmed`) are currently two independent mock-data models. They aren't wired to a shared backend yet, so the exact stage names differ between the two apps today.
 
 ## 🧩 System Architecture
 
@@ -313,9 +312,26 @@ flowchart TB
                                         (ChangeNotifier session / React Context)
 ```
 
-> **Current state:** each application is a self-contained front-end prototype. Role/session state is held in memory (`UserSession` `ChangeNotifier` in the Flutter apps, `AppContext` in the React console), and all services, workers, products, jobs, SOS alerts, and rate cards are backed by **local mock data** rather than a live backend, database, or external API. This is intentional for the hackathon prototype stage — see [Future Scope](#-future-scope) for the planned backend.
+> **Current state:** each application is a self-contained front-end prototype. Role/session state is held in memory (`UserSession` `ChangeNotifier` in the Flutter apps, `AppContext` in the React console), and all services, workers, products, jobs, SOS alerts, and rate cards are backed by **local mock data** rather than a live backend, database, or external API. This is intentional for the hackathon prototype stage. See [Future Scope](#-future-scope) for the planned backend.
 
 ## 🛠️ Tech Stack
+
+**Currently used, for building the two apps and website in this repo:**
+
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+
+**Planned for future implementation, not built yet:**
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Cloud](https://img.shields.io/badge/Cloud_Hosting-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
 
 | Layer | Technology | Purpose |
 |---|---|---|
@@ -329,9 +345,6 @@ flowchart TB
 | Linting | `flutter_lints` | Dart/Flutter static analysis |
 
 ## 📂 Project Structure
-
-<details>
-<summary><b>Click to expand the full repository layout</b></summary>
 
 ```
 SkillsKart/
@@ -365,19 +378,17 @@ SkillsKart/
 │       │                             # RateCards, DemandForecast, BulkRequests,
 │       │                             # AuditLog, Profile, Login
 │       ├── components/             # Layout, Sidebar, Topbar, shared UI
-│       ├── context/                # AppContext — session & scoped app state
-│       └── data/                   # mockData — demo accounts, workers, alerts
+│       ├── context/                # AppContext: session & scoped app state
+│       └── data/                   # mockData: demo accounts, workers, alerts
 │
 └── README.md
 ```
 
-</details>
-
 ## ⚙️ Getting Started
 
 ### Prerequisites
-- [Flutter SDK](https://docs.flutter.dev/get-started/install) (Dart SDK `^3.13.2`) — for `Consumer_App` and `Worker_App`
-- [Node.js](https://nodejs.org/) (v18+) and npm — for `Cooperative_Web`
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) (Dart SDK `^3.13.2`), required for `Consumer_App` and `Worker_App`
+- [Node.js](https://nodejs.org/) (v18+) and npm, required for `Cooperative_Web`
 - An Android/iOS simulator, connected device, or Chrome for Flutter web
 
 ### Clone the repository
@@ -386,39 +397,30 @@ git clone https://github.com/ansh-kukreja/SkillsKart.git
 cd SkillsKart
 ```
 
-<details open>
-<summary><b>1️⃣ Consumer App</b></summary>
-
+**1️⃣ Consumer App**
 ```bash
 cd Consumer_App
 flutter pub get
 flutter run
 ```
-</details>
 
-<details>
-<summary><b>2️⃣ Worker App</b></summary>
-
+**2️⃣ Worker App**
 ```bash
 cd Worker_App
 flutter pub get
 flutter run
 ```
-</details>
 
-<details>
-<summary><b>3️⃣ Cooperative Web Console</b></summary>
-
+**3️⃣ Cooperative Web Console**
 ```bash
 cd Cooperative_Web
 npm install
 npm run dev
 ```
-</details>
 
 ## 🔐 Environment Variables
 
-No `.env` file or environment variable is currently required to run any of the three applications — all data is local mock data bundled with the app (e.g. `Cooperative_Web/src/data/mockData.ts`). This section will be updated once a live backend and external services (payments, SMS/OTP, maps) are integrated.
+No `.env` file or environment variable is currently required to run any of the three applications. All data is local mock data bundled with the app (e.g. `Cooperative_Web/src/data/mockData.ts`). This section will be updated once a live backend and external services (payments, SMS/OTP, maps) are integrated.
 
 ## 🚀 Running the Project
 
@@ -433,7 +435,7 @@ No `.env` file or environment variable is currently required to run any of the t
 - `Consumer_App/test/widget_test.dart` includes a widget test that verifies the login screen renders and the Normal/Enterprise role selection flow works.
 - `Worker_App/test/widget_test.dart` is present as the default Flutter test scaffold.
 - Run either with: `flutter test` from inside the respective app directory.
-- The Cooperative Web Console currently has **no automated test suite** — this is an honest gap, not an oversight, and is tracked under Future Scope.
+- The Cooperative Web Console currently has **no automated test suite**. This is an honest gap, not an oversight, and is tracked under Future Scope.
 
 ## 🔒 Security
 
@@ -445,12 +447,13 @@ No `.env` file or environment variable is currently required to run any of the t
 
 *(Planned, not yet implemented)*
 
-- A real backend (API + database) replacing the current in-memory/mock data across all three apps
+- A real backend (API + database) using the planned Node.js, Express.js, and MongoDB stack, replacing the current in-memory/mock data across all three apps
 - Real authentication (OTP/credential-based) for workers, consumers, and cooperative admins
 - Live geo-location-based service matching
 - Digital payments and invoicing
 - Integration with worker welfare schemes (e.g. e-Shram, PMSBY, PMJJBY, PM-JAY) referenced in our research
-- AI-based demand forecasting to replace the current static/mock forecast view
+- AI/ML-based demand forecasting (Python) to replace the current static/mock forecast view
+- Cloud hosting and deployment for all three apps
 - Multilingual support across all three apps
 - Real-time Emergency SOS dispatch pipeline between the Consumer App and Cooperative Web Console
 
@@ -470,7 +473,7 @@ No license file is currently present in this repository. All rights are reserved
 **Team Nous Cartel**
 
 - Gauraansh Gaur (Team Leader)
-- Mohd Owais
+- Moh Owais
 - Rohan Prasad
 - Shivam Kumar
 - Priyanka Bharti
@@ -480,7 +483,7 @@ No license file is currently present in this repository. All rights are reserved
 
 <div align="center">
 
-Built for **SIH26089** — Cooperative Gig Services Platform for Household & Community Services
+Built for **SIH26089**: Cooperative Gig Services Platform for Household & Community Services
 
 [⬆ Back to top](#-skillskart)
 
