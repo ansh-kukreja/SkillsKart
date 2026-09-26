@@ -300,23 +300,19 @@ flowchart TB
 
 ## 🧩 System Architecture
 
-```
-┌─────────────────────┐   ┌─────────────────────┐   ┌──────────────────────────┐
-│    Consumer App       │   │     Worker App        │   │  Cooperative Web Console  │
-│   (Flutter, Dart)      │   │   (Flutter, Dart)      │   │  (React + TS + Vite)       │
-└──────────┬────────────┘   └──────────┬────────────┘   └────────────┬─────────────┘
-           │                            │                             │
-           └────────────────────────────┴──────────────┬──────────────┘
-                                                          │
-                                              In-app state & mock data
-                                        (ChangeNotifier session / React Context)
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1F2937','primaryTextColor':'#FFFFFF','primaryBorderColor':'#F97316','lineColor':'#F97316','secondaryColor':'#374151','tertiaryColor':'#111827','edgeLabelBackground':'#111827'}}}%%
+flowchart TD
+    A["📱 Consumer App\n(Flutter, Dart)"] --> D["In-app state & mock data\n(ChangeNotifier session / React Context)"]
+    B["👷 Worker App\n(Flutter, Dart)"] --> D
+    C["🌐 Cooperative Web Console\n(React + TS + Vite)"] --> D
 ```
 
 > **Current state:** each application is a self-contained front-end prototype. Role/session state is held in memory (`UserSession` `ChangeNotifier` in the Flutter apps, `AppContext` in the React console), and all services, workers, products, jobs, SOS alerts, and rate cards are backed by **local mock data** rather than a live backend, database, or external API. This is intentional for the hackathon prototype stage. See [Future Scope](#-future-scope) for the planned backend.
 
 ## 🛠️ Tech Stack
 
-**Currently used, for building the three apps and website in this repo:**
+**Currently used, for building the three apps in this repo:**
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
@@ -473,7 +469,7 @@ No license file is currently present in this repository. All rights are reserved
 **Team Nous Cartel**
 
 - Gauraansh Gaur (Team Leader)
-- Moh Owais
+- Mohd Owais
 - Rohan Prasad
 - Shivam Kumar
 - Priyanka Bharti
