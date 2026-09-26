@@ -94,37 +94,7 @@ SkillsKart is split into three purpose-built applications, presented here in the
 
 ## 🏗️ SkillsKart Ecosystem
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1F2937','primaryTextColor':'#FFFFFF','primaryBorderColor':'#F97316','lineColor':'#F97316','secondaryColor':'#374151','tertiaryColor':'#111827','clusterBkg':'#111827','clusterBorder':'#F97316','edgeLabelBackground':'#111827'}}}%%
-flowchart TB
-    subgraph Demand["📱 Consumer App"]
-        NU["Normal User"]
-        EU["Commercial / Enterprise User"]
-    end
-
-    subgraph Partners["👷 Worker App: Partner Portal"]
-        GW["Gig Worker"]
-        PS["Product Seller"]
-        BO["Business Owner"]
-        CO["Community Org"]
-    end
-
-    subgraph Governance["🌐 Cooperative Web Console"]
-        SOC["Cooperative Society\n(Primary Worker Collective)"]
-        FED["Cooperative Federation\n(State / Regional Apex)"]
-    end
-
-    NU -- "books a service" --> GW
-    NU -- "orders a product" --> PS
-    NU -- "applies to a job" --> BO
-    NU -- "joins an initiative" --> CO
-    NU -- "raises Emergency SOS" --> SOC
-    EU -- "bulk requisition" --> FED
-
-    GW -- "verified & governed by" --> SOC
-    PS -- "verified & governed by" --> SOC
-    SOC --> FED
-```
+![SkillsKart Ecosystem Diagram](./skillskart-ecosystem-diagram.jpeg)
 
 > **Reading note:** this diagram, and the rest of this README, follows the **consumer's journey first**. In the real onboarding sequence, a worker must already be verified by a Cooperative Society before a consumer ever sees them; the Cooperative Web Console is what makes that verification possible behind the scenes.
 
