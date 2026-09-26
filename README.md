@@ -94,9 +94,11 @@ SkillsKart is split into three purpose-built applications, presented here in the
 
 ## 🏗️ SkillsKart Ecosystem
 
+<div style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
+
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1F2937','primaryTextColor':'#FFFFFF','primaryBorderColor':'#F97316','lineColor':'#F97316','secondaryColor':'#374151','tertiaryColor':'#111827','clusterBkg':'#111827','clusterBorder':'#F97316','edgeLabelBackground':'#111827'}}}%%
-flowchart TB
+flowchart LR
     subgraph Demand["📱 Consumer App"]
         NU["Normal User"]
         EU["Commercial / Enterprise User"]
@@ -125,6 +127,8 @@ flowchart TB
     PS -- "verified & governed by" --> SOC
     SOC --> FED
 ```
+
+</div>
 
 > **Reading note:** this diagram, and the rest of this README, follows the **consumer's journey first**. In the real onboarding sequence, a worker must already be verified by a Cooperative Society before a consumer ever sees them; the Cooperative Web Console is what makes that verification possible behind the scenes.
 
@@ -202,9 +206,11 @@ Three detailed flows, one per app, in the same consumer → worker → cooperati
 
 ### 📱 Consumer Flow
 
+<div style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
+
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1F2937','primaryTextColor':'#FFFFFF','primaryBorderColor':'#F97316','lineColor':'#F97316','secondaryColor':'#374151','tertiaryColor':'#111827','edgeLabelBackground':'#111827'}}}%%
-flowchart TD
+flowchart LR
     A[Open Consumer App] --> B{Login: choose account type}
     B -->|Normal User| C[Land on Services tab]
     B -->|Enterprise User| C
@@ -227,11 +233,15 @@ flowchart TD
     S --> T["Submitted → Federation Review →\nMatchmaker Assigned → Approved → Deployed"]
 ```
 
+</div>
+
 ### 👷 Worker Flow
+
+<div style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1F2937','primaryTextColor':'#FFFFFF','primaryBorderColor':'#F97316','lineColor':'#F97316','secondaryColor':'#374151','tertiaryColor':'#111827','edgeLabelBackground':'#111827'}}}%%
-flowchart TD
+flowchart LR
     A[Open Worker App] --> B["Role Selection screen\n(Partner Portal)"]
     B -->|Gig Worker| C[Gig Worker home]
     C --> D["Verify Skill tab\nKYC & Skill verification"]
@@ -255,11 +265,15 @@ flowchart TD
     RS -.-> B
 ```
 
+</div>
+
 ### 🌐 Cooperative Flow
+
+<div style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1F2937','primaryTextColor':'#FFFFFF','primaryBorderColor':'#F97316','lineColor':'#F97316','secondaryColor':'#374151','tertiaryColor':'#111827','edgeLabelBackground':'#111827'}}}%%
-flowchart TD
+flowchart LR
     A[Open Cooperative Web Console] --> B{Login: choose role}
     B -->|Cooperative Federation| C[Federation Dashboard]
     B -->|Cooperative Society| D[Society Dashboard]
@@ -279,13 +293,17 @@ flowchart TD
     D --> QQ
 ```
 
+</div>
+
 > Enrolling a worker on the Society Dashboard is wired to automatically generate a cooperative member identity and activate their e-Shram and Group Health Insurance status. This is implemented as mock state (`AppContext`), not a live integration with government portals.
 
 ### 🔗 How the three flows connect
 
+<div style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">
+
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#1F2937','primaryTextColor':'#FFFFFF','primaryBorderColor':'#F97316','lineColor':'#F97316','secondaryColor':'#374151','tertiaryColor':'#111827','edgeLabelBackground':'#111827'}}}%%
-flowchart TB
+flowchart LR
     A["📱 Consumer App\nDiscover a service, product, job, or event"] --> B["Book / Apply / Order / Join"]
     B --> C["👷 Worker App\nGig Worker, Product Seller, Business Owner\nor Community Org fulfils the request"]
     C --> D["🌐 Cooperative Web Console\nFederation & Society verify, price, and govern"]
@@ -294,6 +312,8 @@ flowchart TB
     B --> F["Emergency SOS raised"]
     F --> D
 ```
+
+</div>
 
 - **Emergency SOS:** when a consumer raises an SOS from the Consumer App, it is designed to surface directly in the Cooperative Web Console's Emergency SOS queue (`Open → Dispatched → Resolved`) so the responsible society/federation can dispatch a worker quickly.
 - **Bulk requests:** enterprise/commercial consumers needing multiple workers (e.g. for a construction site or institution) submit a requisition that a Cooperative Federation reviews and approves for deployment. Note the Consumer App's own status labels (`Submitted → Federation Review → Matchmaker Assigned → Approved → Deployed`) and the Web Console's Bulk Tenders labels (`Pending Review → Team Proposed → Confirmed`) are currently two independent mock-data models. They aren't wired to a shared backend yet, so the exact stage names differ between the two apps today.
